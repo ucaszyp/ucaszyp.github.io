@@ -1,160 +1,151 @@
-(() => {
-  "use strict";
+const profile = window.PROFILE;
+const list = document.querySelector("#publication-list");
+const search = document.querySelector("#paper-search");
+let activeFilter = "selected";
 
-  const profile = window.PROFILE;
-  if (!profile) {
-    return;
+function element(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text) node.textContent = text;
+  return node;
+}
+
+function link(label, url, className) {
+  const node = element("a", className, label);
+  node.href = url;
+  if (/^https:/.test(url)) {
+    node.target = "_blank";
+    node.rel = "noopener noreferrer";
   }
+  return node;
+}
 
-  function element(tag, className, text) {
-    const node = document.createElement(tag);
-    if (className) {
-      node.className = className;
-    }
-    if (text) {
-      node.textContent = text;
-    }
-    return node;
-  }
+document.querySelector("#profile-name").replaceChildren(
+  document.createTextNode(`${profile.name} `),
+  element("span", "", profile.nameChinese),
+);
+document.querySelector("#profile-name span").lang = "zh-CN";
+document.querySelector("#affiliation").textContent = profile.affiliation;
+document.querySelector("#introduction").textContent = profile.introduction;
+document.querySelector("#research").textContent = profile.research;
+document.querySelector("#updated").textContent = `Updated ${profile.updated}`;
+document.querySelector("#copyright-year").textContent = new Date().getFullYear();
+const profileLinks = document.querySelector("#profile-links");
+profileLinks.append(link("Google Scholar", profile.scholar), link("GitHub", profile.github));
+if (profile.email) profileLinks.append(link("Email", `mailto:${profile.email}`));
+if (profile.cv) profileLinks.append(link("CV", profile.cv));
+document.querySelector("#scholar-link").href = profile.scholar;
+const portrait = document.querySelector("#portrait");
+if (profile.photo) {
+  const photo = element("img");
+  photo.src = profile.photo;
+  photo.alt = profile.name;
+  photo.width = 158;
+  photo.height = 158;
+  portrait.append(photo, element("figcaption", "", profile.nameChinese));
+} else {
+  portrait.hidden = true;
+}
 
-  function safeUrl(value) {
-    if (!value) {
-      return "";
-    }
-    try {
-      const url = new URL(value, document.baseURI);
-      return ["http:", "https:", "mailto:", "file:"].includes(url.protocol)
-        ? url.href
-        : "";
-    } catch {
-      return "";
-    }
-  }
+for (const item of profile.news) {
+  const row = element("li");
+  const date = element("time", "", item.date);
+  date.dateTime = item.date;
+  row.append(date, element("span", "", item.text));
+  document.querySelector("#news").append(row);
+}
+for (const award of profile.awards) {
+  const row = element("li");
+  const date = element("time", "", award.year);
+  date.dateTime = award.year;
+  const copy = element("div");
+  copy.append(element("span", "award-title", award.title), element("span", "award-detail", award.detail));
+  row.append(date, copy);
+  document.querySelector("#awards-list").append(row);
+}
 
-  function addLink(container, label, url) {
-    const href = safeUrl(url);
-    if (!href) {
-      return;
-    }
-    const link = element("a", "", label);
-    link.href = href;
-    const arrow = element("span", "", "↗");
-    arrow.setAttribute("aria-hidden", "true");
-    link.append(arrow);
-    container.append(link);
-  }
-
-  function fill(id, text) {
-    const node = document.getElementById(id);
-    node.textContent = text || "";
-    node.hidden = !text;
-  }
-
-  document.title = `${profile.name} · Personal Homepage`;
-  document.querySelector('meta[name="description"]').content =
-    `${profile.name} · ${profile.introduction}`;
-  document.querySelectorAll("[data-name]").forEach((node) => {
-    node.textContent = profile.name;
+function authorList(authors) {
+  const fragment = document.createDocumentFragment();
+  authors.forEach((author, index) => {
+    if (index) fragment.append(document.createTextNode(", "));
+    fragment.append(author === profile.name ? element("strong", "", author) : document.createTextNode(author));
   });
-  const heading = document.getElementById("hero-name");
-  heading.replaceChildren(document.createTextNode(profile.name), element("span", "accent", "."));
-  fill("name-chinese", profile.nameChinese);
-  fill("tagline", profile.tagline);
-  fill("affiliation", profile.affiliation);
-  fill("introduction", profile.introduction);
-  fill("contact-text", profile.contactText);
-  fill("year", String(new Date().getFullYear()));
-  fill("monogram", `${Array.from(profile.name)[0]?.toUpperCase() || "U"}.`);
+  return fragment;
+}
 
-  if (profile.photo && safeUrl(profile.photo)) {
+function paperCard(paper) {
+  const article = element("article", "publication");
+  article.id = `paper-${paper.id}`;
+  const visual = link("", paper.links.arXiv, "paper-visual");
+  visual.setAttribute("aria-label", `${paper.short}: view paper`);
+  if (paper.image) {
     const image = element("img");
-    image.alt = `${profile.name} 的照片`;
-    image.src = safeUrl(profile.photo);
-    image.addEventListener("error", () => image.remove());
-    document.getElementById("portrait").append(image);
+    image.src = paper.image;
+    image.alt = `${paper.short} research overview`;
+    image.loading = "lazy";
+    image.width = 195;
+    image.height = 138;
+    visual.append(image);
+  } else {
+    const color = paper.topic === "Robotics" ? "robotics" : paper.topic === "3D Perception" ? "perception" : "";
+    const cover = element("div", `paper-cover ${color}`);
+    cover.append(element("strong", "", paper.short), element("span", "", `${paper.venue} · ${paper.year}`));
+    visual.append(cover);
   }
+  const body = element("div", "paper-body");
+  const title = element("h3");
+  title.append(link(paper.title, paper.links.Paper || paper.links.arXiv));
+  const authors = element("div", "authors");
+  authors.append(authorList(paper.authors.slice(0, 6)));
+  if (paper.authors.length > 6) {
+    authors.append(document.createTextNode(", et al. "));
+    const details = element("details", "author-details");
+    details.append(element("summary", "", `All ${paper.authors.length} authors`));
+    const full = element("span", "full-authors");
+    full.append(authorList(paper.authors));
+    details.append(full);
+    authors.append(details);
+  }
+  const venue = element("div", "venue-line");
+  venue.append(element("span", "venue", `${paper.venue} ${paper.year}`));
+  if (paper.status !== "Published") {
+    const statusClass = paper.status === "Preprint" ? "preprint" : paper.status === "Conditional acceptance" ? "conditional" : "";
+    venue.append(element("span", `status ${statusClass}`, paper.status));
+  }
+  venue.append(element("span", "role", paper.role));
+  const links = element("div", "paper-links");
+  for (const [label, url] of Object.entries(paper.links)) {
+    links.append(link(label, url));
+  }
+  body.append(title, authors, venue, element("p", "description", paper.description), links);
+  article.append(visual, body);
+  return article;
+}
 
-  for (const id of ["profile-links", "contact-links"]) {
-    const container = document.getElementById(id);
-    if (profile.email) {
-      addLink(container, "Email", `mailto:${profile.email}`);
-    }
-    addLink(container, "GitHub", profile.github);
-    addLink(container, "Google Scholar", profile.scholar);
-    if (id === "profile-links") {
-      addLink(container, "Curriculum Vitae", profile.cv);
-    }
+function renderPublications() {
+  const query = search.value.trim().toLowerCase();
+  const papers = profile.publications.filter((paper) => {
+    const matchesFilter = activeFilter === "all"
+      || (activeFilter === "selected" ? paper.selected : paper.topic === activeFilter);
+    const searchable = [paper.title, paper.short, paper.venue, paper.year, paper.role, ...paper.authors].join(" ").toLowerCase();
+    return matchesFilter && (!query || searchable.includes(query));
+  });
+  list.replaceChildren(...papers.map(paperCard));
+  if (!papers.length) {
+    list.append(element("p", "empty-state", "No matching papers. Try another keyword or select All papers."));
   }
-
-  for (const paragraph of profile.about || []) {
-    document.getElementById("about-text").append(element("p", "", paragraph));
-  }
-  for (const interest of profile.interests || []) {
-    document.getElementById("interests").append(element("span", "tag", interest));
-  }
-
-  for (const [index, project] of (profile.projects || []).entries()) {
-    const href = safeUrl(project.url);
-    const card = element(href ? "a" : "article", "project");
-    if (href) {
-      card.href = href;
+  document.querySelector("#paper-count").textContent = `${papers.length} of ${profile.publications.length} featured publications`;
+}
+for (const button of document.querySelectorAll(".filter")) {
+  button.addEventListener("click", () => {
+    activeFilter = button.dataset.filter;
+    for (const item of document.querySelectorAll(".filter")) {
+      const active = item === button;
+      item.classList.toggle("active", active);
+      item.setAttribute("aria-pressed", String(active));
     }
-    card.append(element("span", "project-number", String(index + 1).padStart(2, "0")));
-    const body = element("div");
-    body.append(
-      element("span", "category", project.category),
-      element("h3", "", project.name),
-      element("p", "", project.description),
-    );
-    card.append(body);
-    if (href) {
-      const arrow = element("span", "project-arrow", "↗");
-      arrow.setAttribute("aria-hidden", "true");
-      card.append(arrow);
-    }
-    document.getElementById("project-list").append(card);
-  }
-
-  if (profile.publications?.length) {
-    const papers = document.getElementById("papers");
-    papers.replaceChildren();
-    for (const paper of profile.publications) {
-      const item = element("article", "publication");
-      item.append(
-        element("p", "venue", paper.venue),
-        element("h3", "", paper.title),
-        element("p", "", paper.authors),
-        element("p", "", paper.description),
-      );
-      const links = element("div", "profile-links");
-      for (const link of paper.links || []) {
-        addLink(links, link.label, link.url);
-      }
-      item.append(links);
-      papers.append(item);
-    }
-  }
-
-  if (profile.news?.length) {
-    document.getElementById("news-section").hidden = false;
-    for (const news of profile.news) {
-      const item = element("div", "news-item");
-      item.append(element("time", "", news.date), element("p", "", news.text));
-      document.getElementById("news").append(item);
-    }
-  }
-
-  if (profile.experience?.length) {
-    document.getElementById("experience-section").hidden = false;
-    for (const entry of profile.experience) {
-      const item = element("article", "experience-item");
-      item.append(
-        element("span", "period", entry.period),
-        element("h3", "", entry.role),
-        element("p", "", entry.institution),
-        element("p", "", entry.description),
-      );
-      document.getElementById("experience").append(item);
-    }
-  }
-})();
+    renderPublications();
+  });
+}
+search.addEventListener("input", renderPublications);
+renderPublications();

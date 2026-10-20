@@ -1,86 +1,78 @@
 <!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ucaszyp 的个人主页：研究、开源项目与思考。">
-    <meta name="theme-color" content="#f8f7f3">
-    <title>ucaszyp · Personal Homepage</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
-    <script src="content.js" defer></script>
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">跳转到正文</a>
-    <header class="site-header">
-      <a class="wordmark" href="#home" aria-label="返回首页">
-        <span class="brand-dot"></span><span data-name>ucaszyp</span><span class="muted"> / </span>
-      </a>
-      <nav aria-label="主导航">
-        <a href="#about">关于</a>
-        <a href="#publications">论文</a>
-        <a href="#projects">项目</a>
-        <a href="#contact">联系 <span aria-hidden="true">↗</span></a>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="hero" id="home" aria-labelledby="hero-name">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="small-dot"></span> PERSONAL HOMEPAGE</p>
-          <h1 id="hero-name">ucaszyp<span class="accent">.</span></h1>
-          <p id="name-chinese" class="name-chinese" hidden></p>
-          <p id="tagline" class="tagline">Research, projects &amp; notes.</p>
-          <p id="affiliation" class="affiliation" hidden></p>
-          <p id="introduction" class="introduction"></p>
-          <div id="profile-links" class="profile-links"></div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yupeng Zheng (郑宇鹏), Institute of Automation, Chinese Academy of Sciences. Research in robotics, world models, autonomous driving, and 3D perception.">
+  <meta name="theme-color" content="#f8f9fb">
+  <meta property="og:title" content="Yupeng Zheng · 郑宇鹏">
+  <meta property="og:description" content="Robotic manipulation, world models, and autonomous driving.">
+  <meta property="og:url" content="https://ucaszyp.github.io/">
+  <title>Yupeng Zheng · 郑宇鹏</title>
+  <link rel="canonical" href="https://ucaszyp.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="wordmark" href="#about">Yupeng Zheng<span>.</span></a>
+      <div class="nav-links"><a href="#about">About</a><a href="#publications">Publications</a><a href="#awards">Awards</a></div>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="profile" id="about" aria-labelledby="profile-name">
+      <div class="profile-copy">
+        <p class="eyebrow">EMBODIED INTELLIGENCE</p>
+        <h1 id="profile-name">Yupeng Zheng <span lang="zh-CN">郑宇鹏</span></h1>
+        <p class="affiliation" id="affiliation">Institute of Automation, Chinese Academy of Sciences</p>
+        <p id="introduction"></p>
+        <div class="profile-links" id="profile-links"></div>
+      </div>
+      <figure class="portrait" id="portrait"></figure>
+    </section>
+    <section class="research-section" aria-labelledby="research-title">
+      <h2 id="research-title">Research</h2>
+      <p id="research"></p>
+      <div class="research-topics" aria-label="Research interests">
+        <span>Robotic manipulation</span><span>World models</span><span>Autonomous driving</span><span>3D perception</span>
+      </div>
+    </section>
+    <section class="news-section" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <ul id="news" class="news-list"></ul>
+    </section>
+    <section id="publications" aria-labelledby="publications-title">
+      <div class="section-heading">
+        <h2 id="publications-title">Publications</h2>
+        <a id="scholar-link" class="subtle-link" href="https://scholar.google.com/citations?hl=en&amp;user=anGhGdYAAAAJ">Full list on Google Scholar ↗</a>
+      </div>
+      <p class="section-note">Selected papers and recent preprints. My name is highlighted in the author lists.</p>
+      <div class="publication-controls">
+        <div class="filters" role="group" aria-label="Filter publications">
+          <button type="button" class="filter active" data-filter="selected" aria-pressed="true">Selected</button>
+          <button type="button" class="filter" data-filter="all" aria-pressed="false">All papers</button>
+          <button type="button" class="filter" data-filter="Robotics" aria-pressed="false">Robotics</button>
+          <button type="button" class="filter" data-filter="Driving" aria-pressed="false">Driving</button>
+          <button type="button" class="filter" data-filter="3D Perception" aria-pressed="false">3D perception</button>
         </div>
-        <div class="portrait-frame">
-          <div class="portrait" id="portrait">
-            <div class="portrait-grid" aria-hidden="true"></div>
-            <span class="portrait-monogram" id="monogram" aria-hidden="true">U.</span>
-            <span class="portrait-caption" aria-hidden="true">A WORK IN PROGRESS</span>
-          </div>
-          <span class="portrait-note">Stay curious. Keep exploring.</span>
-        </div>
-      </section>
-      <section class="section-row" id="about" aria-labelledby="about-heading">
-        <div class="section-label"><span>01 / ABOUT</span><h2 id="about-heading">关于我</h2></div>
-        <div class="section-content">
-          <div id="about-text" class="prose"></div>
-          <div id="interests" class="tags"></div>
-        </div>
-      </section>
-      <section class="section-row" id="news-section" aria-labelledby="news-heading" hidden>
-        <div class="section-label"><span>UPDATES</span><h2 id="news-heading">最近动态</h2></div>
-        <div id="news" class="section-content"></div>
-      </section>
-      <section class="section-row" id="publications" aria-labelledby="papers-heading">
-        <div class="section-label"><span>02 / PUBLICATIONS</span><h2 id="papers-heading">论文发表</h2></div>
-        <div id="papers" class="section-content">
-          <div class="empty-state"><span class="empty-symbol" aria-hidden="true">↗</span><p>研究成果，陆续整理中。</p><span>Selected publications will be added here.</span></div>
-        </div>
-      </section>
-      <section class="section-row" id="projects" aria-labelledby="projects-heading">
-        <div class="section-label"><span>03 / OPEN SOURCE</span><h2 id="projects-heading">开源项目</h2><p>From ideas to code.</p></div>
-        <div id="project-list" class="section-content"></div>
-      </section>
-      <section class="section-row" id="experience-section" aria-labelledby="experience-heading" hidden>
-        <div class="section-label"><span>EXPERIENCE</span><h2 id="experience-heading">教育与经历</h2></div>
-        <div id="experience" class="section-content"></div>
-      </section>
-      <section class="contact" id="contact" aria-labelledby="contact-heading">
-        <p class="eyebrow">LET'S CONNECT</p>
-        <h2 id="contact-heading">保持联系<span class="accent">.</span></h2>
-        <p id="contact-text"></p>
-        <div id="contact-links" class="profile-links"></div>
-      </section>
-    </main>
+        <label class="search-label"><span class="sr-only">Search publications</span><input id="paper-search" type="search" placeholder="Search papers…" autocomplete="off"></label>
+      </div>
+      <p id="paper-count" class="paper-count" role="status" aria-live="polite"></p>
+      <div id="publication-list"></div>
+      <noscript><p>Enable JavaScript to see the publication list, or visit <a href="https://scholar.google.com/citations?user=anGhGdYAAAAJ">Google Scholar</a>.</p></noscript>
+    </section>
+    <section id="awards" class="awards-section" aria-labelledby="awards-title">
+      <h2 id="awards-title">Honors &amp; Awards</h2>
+      <ul id="awards-list" class="awards-list"></ul>
+    </section>
     <footer>
-      <span>© <span id="year"></span> <span data-name>ucaszyp</span></span>
-      <span>Built with curiosity. <a href="#home" aria-label="回到顶部">↑</a></span>
+      <p>© <span id="copyright-year">2026</span> Yupeng Zheng <span class="footer-divider">/</span> <span id="updated"></span></p>
+      <a href="#about">Back to top ↑</a>
     </footer>
-    <noscript><p class="noscript">请启用 JavaScript 查看完整主页。你也可以访问 <a href="https://github.com/ucaszyp">GitHub</a>。</p></noscript>
-  </body>
+  </main>
+</body>
 </html>
-

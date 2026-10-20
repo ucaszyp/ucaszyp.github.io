@@ -1,58 +1,701 @@
-// 今晚从这里开始填写：只改引号中的文字，保存后提交到 main 即可更新网页。
-// 留空的邮箱、单位、链接不会显示。论文、经历和动态可照注释添加。
+// Edit your biography, links, news, awards, and papers here.
+// 留空的 email / cv 不会显示。selected 控制论文是否在精选视图显示。
+// 作者顺序来自公开论文版本；期刊、会议状态和个人贡献以本人材料为准。
 window.PROFILE = {
-  name: "ucaszyp",
-  nameChinese: "",
-  tagline: "Research, projects & notes.",
-  affiliation: "",
-  introduction: "欢迎来到我的个人主页。这里记录我的研究、开源项目与思考。",
-  about: [
-    "个人简介即将更新。",
-    "你可以在这里介绍研究方向、教育背景，以及正在探索的问题。",
+  "name": "Yupeng Zheng",
+  "nameChinese": "郑宇鹏",
+  "affiliation": "Institute of Automation, Chinese Academy of Sciences",
+  "affiliationChinese": "中国科学院自动化研究所",
+  "introduction": "I work on embodied intelligence at the Institute of Automation, Chinese Academy of Sciences, advised by Dongbin Zhao (赵冬斌) and Qichao Zhang (张启超).",
+  "research": "My research spans robotic manipulation, world models, and autonomous driving. I study how agents can learn useful representations of the physical world and turn them into reliable actions, with recent work on vision-language-action models, visuo-tactile learning, and latent world models.",
+  "photo": "portrait.jpg",
+  "email": "",
+  "cv": "",
+  "scholar": "https://scholar.google.com/citations?hl=en&user=anGhGdYAAAAJ",
+  "github": "https://github.com/ucaszyp",
+  "updated": "October 2026",
+  "news": [
+    {
+      "date": "2026",
+      "text": "World In Your Hands (WIYH) accepted to CoRL 2026."
+    },
+    {
+      "date": "2026",
+      "text": "DriveVLA-M0 and Latent-WAM accepted to ACM MM 2026; DreamerAD accepted to ECCV 2026."
+    },
+    {
+      "date": "2026",
+      "text": "New work on robot learning: GIFT, PokéVLA, LAWA, VT-WAM, and interaction latents."
+    }
   ],
-  interests: [],
-  // 上传照片到 assets/photo.jpg 后，把下面改为 "assets/photo.jpg"。
-  photo: "",
-  email: "",
-  github: "https://github.com/ucaszyp",
-  scholar: "",
-  cv: "",
-  // 示例：{ date: "2026.10", text: "分享一条近况。" },
-  news: [],
-  // 示例：
-  // {
-  //   title: "论文标题",
-  //   authors: "作者列表",
-  //   venue: "会议 / 期刊 · 年份",
-  //   description: "用一句话介绍这项工作。",
-  //   links: [
-  //     { label: "Paper", url: "https://..." },
-  //     { label: "Code", url: "https://..." },
-  //   ],
-  // },
-  publications: [],
-  // 以下内容来自账号已有公开仓库，可自由增删、调整顺序。
-  projects: [
+  "awards": [
     {
-      name: "World4Drive",
-      category: "WORLD MODELS",
-      description: "自动驾驶研究项目。代码与项目说明见公开仓库。",
-      url: "https://github.com/ucaszyp/World4Drive",
+      "year": "2025",
+      "title": "Best Paper Award",
+      "detail": "ACM MM 2025 · RoboSoft’25 Workshop"
     },
     {
-      name: "MonoOcc",
-      category: "3D PERCEPTION",
-      description: "Digging into Monocular Semantic Occupancy Prediction.",
-      url: "https://github.com/ucaszyp/MonoOcc",
+      "year": "2025",
+      "title": "EAI-100 Top 10 Datasets Project",
+      "detail": "ModelScope · Project recognition"
     },
     {
-      name: "STEPS",
-      category: "VISUAL PERCEPTION",
-      description: "Joint Self-supervised Nighttime Image Enhancement and Depth Estimation.",
-      url: "https://github.com/ucaszyp/STEPS",
+      "year": "2024",
+      "title": "National Scholarship · 国家奖学金",
+      "detail": "Institute of Automation, Chinese Academy of Sciences"
     },
+    {
+      "year": "2024",
+      "title": "Merit Student · 三好学生",
+      "detail": "University of Chinese Academy of Sciences"
+    },
+    {
+      "year": "2023",
+      "title": "Best Demo Award",
+      "detail": "CICAI 2023"
+    }
   ],
-  // 示例：{ period: "2022 — 至今", role: "学位 / 职位", institution: "学校 / 单位", description: "补充说明" },
-  experience: [],
-  contactText: "欢迎交流研究、项目与新的想法。",
+  "publications": [
+    {
+      "id": "wiyh",
+      "short": "WIYH",
+      "title": "World In Your Hands: A Large-Scale and Open-Source Ecosystem for Learning Human-Centric Manipulation in the Wild",
+      "authors": [
+        "Yupeng Zheng",
+        "Jichao Peng",
+        "Weize Li",
+        "Yuhang Zheng",
+        "Xiang Li",
+        "Yujie Jin",
+        "Julong Wei",
+        "Guanhua Zhang",
+        "Ruiling Zheng",
+        "Ming Cao",
+        "Songen Gu",
+        "Zhenhong Zou",
+        "Kaige Li",
+        "Ke Wu",
+        "Mingmin Yang",
+        "Jiahao Liu",
+        "Pengfei Li",
+        "Hengjie Si",
+        "Feiyu Zhu",
+        "Wang Fu",
+        "Likun Wang",
+        "Ruiwen Yao",
+        "Jieru Zhao",
+        "Yilun Chen",
+        "Wenchao Ding"
+      ],
+      "year": 2026,
+      "venue": "CoRL",
+      "status": "Accepted",
+      "topic": "Robotics",
+      "role": "First author",
+      "selected": true,
+      "description": "An open ecosystem of in-the-wild human manipulation data, wearable collection hardware, and benchmarks for learning robot skills.",
+      "image": "paper-wiyh.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2512.24310",
+        "Project": "https://wiyh.tars-ai.com/",
+        "Code": "https://github.com/tars-robotics/World-In-Your-Hands"
+      }
+    },
+    {
+      "id": "gift",
+      "short": "GIFT",
+      "title": "GIFT: Guided Intermediate Feature Training via Action-Oriented Structural Supervision for Robotic Manipulation",
+      "authors": [
+        "Yupeng Zheng",
+        "Xiang Li",
+        "Songen Gu",
+        "Yuhang Zheng",
+        "Shuai Tian",
+        "Weize Li",
+        "Linbo Wang",
+        "Chaoyue Li",
+        "Qichao Zhang",
+        "Haoran Li",
+        "Zhongpu Xia",
+        "Ya-Qin Zhang",
+        "Shuicheng Yan",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "First author",
+      "selected": true,
+      "description": "Guiding intermediate policy features with geometry, affordances, and goals to improve robotic manipulation.",
+      "image": "paper-gift.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2609.04193",
+        "Project": "https://openphoenix-team.github.io/GIFT-pages"
+      }
+    },
+    {
+      "id": "pokevla",
+      "short": "PokéVLA",
+      "title": "PokéVLA: Empowering Pocket-Sized Vision-Language-Action Model with Comprehensive World Knowledge Guidance",
+      "authors": [
+        "Yupeng Zheng",
+        "Xiang Li",
+        "Songen Gu",
+        "Yuhang Zheng",
+        "Shuai Tian",
+        "Weize Li",
+        "Linbo Wang",
+        "Senyu Fei",
+        "Pengfei Li",
+        "Yinfeng Gao",
+        "Zebin Xing",
+        "Yilun Chen",
+        "Qichao Zhang",
+        "Haoran Li",
+        "Wenchao Ding"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "First author",
+      "selected": true,
+      "description": "Bringing spatial understanding and manipulation knowledge to compact vision-language-action models.",
+      "image": "paper-pokevla.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2604.20834",
+        "Project": "https://getterupper.github.io/PokeVLA"
+      }
+    },
+    {
+      "id": "lawa",
+      "short": "LAWA",
+      "title": "Latent Action as Intention Enables Efficient Future Imagination for World Action Models",
+      "authors": [
+        "Xiang Li",
+        "Yupeng Zheng",
+        "Songen Gu",
+        "Huailiang Ma",
+        "Feng Yu",
+        "Yuhang Zheng",
+        "Xian Nie",
+        "Shanshuai Yuan",
+        "Yujie Zang",
+        "Weize Li",
+        "Shuai Tian",
+        "Moyang Liu",
+        "Ya-Qin Zhang",
+        "Wenchao Ding"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "Corresponding author",
+      "selected": false,
+      "description": "Compact latent actions preserve future imagination while reducing the inference cost of world action models.",
+      "image": "paper-lawa.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2608.24882",
+        "Project": "https://getterupper.github.io/LAWA"
+      }
+    },
+    {
+      "id": "interaction",
+      "short": "ILA",
+      "title": "Interaction Latents as Actions for Contact-Rich Manipulation",
+      "authors": [
+        "Yuhang Zheng",
+        "Yujie Zang",
+        "Yuchen Liu",
+        "Yupeng Zheng",
+        "Zhennan Jiang",
+        "Zebin Xing",
+        "Shuai Tian",
+        "Songen Gu",
+        "Jingxiang Guo",
+        "Chen Gao",
+        "Zhongpu Xia",
+        "Shuicheng Yan"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "Corresponding author",
+      "selected": false,
+      "description": "Representing motion, contact, and force evolution as shared action units for contact-rich manipulation.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2610.18855",
+        "Project": "https://mrsecant.github.io/ILA/"
+      }
+    },
+    {
+      "id": "vtwam",
+      "short": "VT-WAM",
+      "title": "VT-WAM: Visual-Tactile World Action Model for Contact-Rich Manipulation",
+      "authors": [
+        "Shuai Tian",
+        "Yupeng Zheng",
+        "Yuhang Zheng",
+        "Songen Gu",
+        "Yujie Zang",
+        "Yuxing Qin",
+        "Weize Li",
+        "Haoran Li",
+        "Wenchao Ding",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "Project lead",
+      "selected": false,
+      "description": "Joint visual, tactile, and action prediction for contact-aware robot control.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2607.02503",
+        "Project": "https://vt-wam.github.io/"
+      }
+    },
+    {
+      "id": "tacforesight",
+      "short": "TacForeSight",
+      "title": "TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation",
+      "authors": [
+        "Yujie Zang",
+        "Yuhang Zheng",
+        "Xian Nie",
+        "Yupeng Zheng",
+        "Shuai Tian",
+        "Songen Gu",
+        "Chen Gao",
+        "Zining Wang",
+        "Shuicheng Yan",
+        "Wenchao Ding"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "Project lead",
+      "selected": false,
+      "description": "Force-guided tactile dynamics provide anticipatory contact information for real-time manipulation.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2606.11184",
+        "Project": "https://tacforesight.github.io/ProjectPage"
+      }
+    },
+    {
+      "id": "omnivta",
+      "short": "OmniVTA",
+      "title": "OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation",
+      "authors": [
+        "Yuhang Zheng",
+        "Songen Gu",
+        "Yupeng Zheng",
+        "Weize Li",
+        "Yujie Zang",
+        "Shuai Tian",
+        "Xiang Li",
+        "Ce Hao",
+        "Chen Gao",
+        "Si Liu",
+        "Haoran Li",
+        "Yilun Chen",
+        "Shuicheng Yan",
+        "Wenchao Ding"
+      ],
+      "year": 2026,
+      "venue": "IEEE T-RO",
+      "status": "Conditional acceptance",
+      "topic": "Robotics",
+      "role": "Corresponding author",
+      "selected": false,
+      "description": "Visuo-tactile world modeling and closed-loop feedback for contact-rich manipulation.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2603.19201",
+        "Project": "https://mrsecant.github.io/OmniVTA"
+      }
+    },
+    {
+      "id": "drivevla",
+      "short": "DriveVLA-M0",
+      "title": "DriveVLA-M0: Failure-Aware Memory Augmentation for Autonomous Driving",
+      "authors": [
+        "Zebin Xing",
+        "Yupeng Zheng",
+        "Qiang Chen",
+        "Linbo Wang",
+        "Yichen Zhang",
+        "Pengxuan Yang",
+        "Junli Wang",
+        "Deheng Qian",
+        "Xiaoqing Ye",
+        "Junyu Han",
+        "Yifeng Pan",
+        "Qichao Zhang",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "ACM MM",
+      "status": "Accepted",
+      "topic": "Driving",
+      "role": "Co-first author",
+      "selected": false,
+      "description": "A failure-aware memory helps driving VLAs retrieve experience and adapt to challenging scenarios.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2608.10413",
+        "Code": "https://github.com/ZebinX/DriveVLA-M0",
+        "DOI": "https://doi.org/10.1145/3767308.3835233"
+      }
+    },
+    {
+      "id": "latentwam",
+      "short": "Latent-WAM",
+      "title": "Latent-WAM: Latent World Action Modeling for End-to-End Autonomous Driving",
+      "authors": [
+        "Linbo Wang",
+        "Yupeng Zheng",
+        "Qiang Chen",
+        "Shiwei Li",
+        "Yichen Zhang",
+        "Zebin Xing",
+        "Qichao Zhang",
+        "Xiang Li",
+        "Deheng Qian",
+        "Pengxuan Yang",
+        "Yihang Dong",
+        "Ce Hao",
+        "Xiaoqing Ye",
+        "Junyu Han",
+        "Yifeng Pan",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "ACM MM",
+      "status": "Accepted",
+      "topic": "Driving",
+      "role": "Co-first author · Project lead",
+      "selected": false,
+      "description": "Compact, spatially aware latent world representations for end-to-end trajectory planning.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2603.24581",
+        "Code": "https://github.com/yukki555/Latent-WAM"
+      }
+    },
+    {
+      "id": "dreamerad",
+      "short": "DreamerAD",
+      "title": "DreamerAD: Efficient Reinforcement Learning via Latent World Model for Autonomous Driving",
+      "authors": [
+        "Pengxuan Yang",
+        "Yupeng Zheng",
+        "Deheng Qian",
+        "Zebin Xing",
+        "Qichao Zhang",
+        "Linbo Wang",
+        "Yichen Zhang",
+        "Shaoyu Guo",
+        "Zhongpu Xia",
+        "Qiang Chen",
+        "Junyu Han",
+        "Lingyun Xu",
+        "Yifeng Pan",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "ECCV",
+      "status": "Accepted",
+      "topic": "Driving",
+      "role": "Project lead",
+      "selected": false,
+      "description": "Efficient reinforcement learning for driving through fast latent-world imagination.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2603.24587"
+      }
+    },
+    {
+      "id": "scaling",
+      "short": "Data Scaling Laws",
+      "title": "Data Scaling Laws for Imitation Learning-Based End-to-End Autonomous Driving",
+      "authors": [
+        "Yupeng Zheng",
+        "Pengxuan Yang",
+        "Zhongpu Xia",
+        "Qichao Zhang",
+        "Yuhang Zheng",
+        "Songen Gu",
+        "Bu Jin",
+        "Teng Zhang",
+        "Ben Lu",
+        "Chao Han",
+        "Xianpeng Lang",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "IEEE ICRA",
+      "status": "Published",
+      "topic": "Driving",
+      "role": "First author",
+      "selected": false,
+      "description": "Studying how data quantity and distribution affect generalization in imitation-based autonomous driving.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2412.02689",
+        "Code": "https://github.com/ucaszyp/Driving-Scaling-Law",
+        "DOI": "https://doi.org/10.1109/ICRA57385.2026.11696016"
+      }
+    },
+    {
+      "id": "planagent",
+      "short": "PlanAgent",
+      "title": "PlanAgent: A Multi-modal Large Language Agent for Closed-loop Vehicle Motion Planning",
+      "authors": [
+        "Yupeng Zheng",
+        "Zebin Xing",
+        "Qichao Zhang",
+        "Bu Jin",
+        "Pengfei Li",
+        "Yuhang Zheng",
+        "Zhongpu Xia",
+        "Kun Zhan",
+        "Xianpeng Lang",
+        "Yaran Chen",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "IEEE TCDS",
+      "status": "Published",
+      "topic": "Driving",
+      "role": "First author",
+      "selected": true,
+      "description": "Multimodal reasoning and reflection for closed-loop vehicle motion planning.",
+      "image": "paper-planagent.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2406.01587",
+        "Code": "https://github.com/ucaszyp/PlanAgent",
+        "DOI": "https://doi.org/10.1109/TCDS.2026.3664120"
+      }
+    },
+    {
+      "id": "mimir",
+      "short": "Mimir",
+      "title": "Mimir: Hierarchical Goal-Driven Diffusion with Uncertainty Propagation for End-to-End Autonomous Driving",
+      "authors": [
+        "Zebin Xing",
+        "Yupeng Zheng",
+        "Qichao Zhang",
+        "Zhixing Ding",
+        "Pengxuan Yang",
+        "Songen Gu",
+        "Zhongpu Xia",
+        "Dongbin Zhao"
+      ],
+      "year": 2026,
+      "venue": "IEEE RA-L",
+      "status": "Published",
+      "topic": "Driving",
+      "role": "Project lead",
+      "selected": false,
+      "description": "Hierarchical goal-driven diffusion with uncertainty-aware guidance for robust driving trajectories.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2512.07130",
+        "Code": "https://github.com/ZebinX/Mimir-Uncertainty-Driving",
+        "DOI": "https://doi.org/10.1109/LRA.2025.3641129"
+      }
+    },
+    {
+      "id": "world4drive",
+      "short": "World4Drive",
+      "title": "World4Drive: End-to-End Autonomous Driving via Intention-aware Physical Latent World Model",
+      "authors": [
+        "Yupeng Zheng",
+        "Pengxuan Yang",
+        "Zebin Xing",
+        "Qichao Zhang",
+        "Yuhang Zheng",
+        "Yinfeng Gao",
+        "Pengfei Li",
+        "Teng Zhang",
+        "Zhongpu Xia",
+        "Peng Jia",
+        "Xianpeng Lang",
+        "Dongbin Zhao"
+      ],
+      "year": 2025,
+      "venue": "ICCV",
+      "status": "Published",
+      "topic": "Driving",
+      "role": "First author",
+      "selected": true,
+      "description": "Intention-aware latent world models enable end-to-end planning without manual perception annotations.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2507.00603",
+        "Code": "https://github.com/ucaszyp/World4Drive",
+        "Paper": "https://openaccess.thecvf.com/content/ICCV2025/html/Zheng_World4Drive_End-to-End_Autonomous_Driving_via_Intention-aware_Physical_Latent_World_Model_ICCV_2025_paper.html"
+      }
+    },
+    {
+      "id": "discene",
+      "short": "DiScene",
+      "title": "Enhancing Indoor Occupancy Prediction via Sparse Query-Based Multi-Level Consistent Knowledge Distillation",
+      "authors": [
+        "Xiang Li",
+        "Yupeng Zheng",
+        "Pengfei Li",
+        "Yilun Chen",
+        "Ya-Qin Zhang",
+        "Wenchao Ding"
+      ],
+      "year": 2025,
+      "venue": "IEEE RA-L",
+      "status": "Published",
+      "topic": "3D Perception",
+      "role": "Project lead",
+      "selected": false,
+      "description": "Sparse queries and multi-level knowledge distillation for efficient indoor occupancy prediction.",
+      "image": "paper-discene.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2602.02318",
+        "Code": "https://github.com/getterupper/DiScene",
+        "DOI": "https://doi.org/10.1109/LRA.2025.3615532"
+      }
+    },
+    {
+      "id": "uncad",
+      "short": "UncAD",
+      "title": "UncAD: Towards Safe End-to-end Autonomous Driving via Online Map Uncertainty",
+      "authors": [
+        "Pengxuan Yang",
+        "Yupeng Zheng",
+        "Qichao Zhang",
+        "Kefei Zhu",
+        "Zebin Xing",
+        "Qiao Lin",
+        "Yun-Fu Liu",
+        "Zhiguo Su",
+        "Dongbin Zhao"
+      ],
+      "year": 2025,
+      "venue": "IEEE ICRA",
+      "status": "Published",
+      "topic": "Driving",
+      "role": "Co-first author",
+      "selected": false,
+      "description": "Using online map uncertainty to improve the safety of end-to-end driving.",
+      "image": "",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2504.12826",
+        "Code": "https://github.com/pengxuanyang/UncAD",
+        "DOI": "https://doi.org/10.1109/ICRA55743.2025.11128148"
+      }
+    },
+    {
+      "id": "tod3cap",
+      "short": "TOD3Cap",
+      "title": "TOD3Cap: Towards 3D Dense Captioning in Outdoor Scenes",
+      "authors": [
+        "Bu Jin",
+        "Yupeng Zheng",
+        "Pengfei Li",
+        "Weize Li",
+        "Yuhang Zheng",
+        "Sujie Hu",
+        "Xinyu Liu",
+        "Jinwei Zhu",
+        "Zhijie Yan",
+        "Haiyang Sun",
+        "Kun Zhan",
+        "Peng Jia",
+        "Xiaoxiao Long",
+        "Yilun Chen",
+        "Hao Zhao"
+      ],
+      "year": 2024,
+      "venue": "ECCV",
+      "status": "Published",
+      "topic": "3D Perception",
+      "role": "Corresponding author",
+      "selected": false,
+      "description": "A dataset and framework for describing 3D objects in outdoor scenes with natural language.",
+      "image": "paper-tod3cap.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2403.19589",
+        "Project": "https://jxbbb.github.io/TOD3Cap",
+        "Code": "https://github.com/jxbbb/TOD3Cap",
+        "DOI": "https://doi.org/10.1007/978-3-031-72649-1_21"
+      }
+    },
+    {
+      "id": "monoocc",
+      "short": "MonoOcc",
+      "title": "MonoOcc: Digging into Monocular Semantic Occupancy Prediction",
+      "authors": [
+        "Yupeng Zheng",
+        "Xiang Li",
+        "Pengfei Li",
+        "Yuhang Zheng",
+        "Bu Jin",
+        "Chengliang Zhong",
+        "Xiaoxiao Long",
+        "Hao Zhao",
+        "Qichao Zhang"
+      ],
+      "year": 2024,
+      "venue": "IEEE ICRA",
+      "status": "Published",
+      "topic": "3D Perception",
+      "role": "First author",
+      "selected": true,
+      "description": "Recovering semantic 3D occupancy from monocular images with visual guidance and knowledge distillation.",
+      "image": "paper-monoocc.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2403.08766",
+        "Code": "https://github.com/ucaszyp/MonoOcc",
+        "DOI": "https://doi.org/10.1109/ICRA57147.2024.10611261"
+      }
+    },
+    {
+      "id": "steps",
+      "short": "STEPS",
+      "title": "STEPS: Joint Self-supervised Nighttime Image Enhancement and Depth Estimation",
+      "authors": [
+        "Yupeng Zheng",
+        "Chengliang Zhong",
+        "Pengfei Li",
+        "Huan-ang Gao",
+        "Yuhang Zheng",
+        "Bu Jin",
+        "Ling Wang",
+        "Hao Zhao",
+        "Guyue Zhou",
+        "Qichao Zhang",
+        "Dongbin Zhao"
+      ],
+      "year": 2023,
+      "venue": "IEEE ICRA",
+      "status": "Published",
+      "topic": "3D Perception",
+      "role": "First author",
+      "selected": true,
+      "description": "Joint self-supervised image enhancement and depth estimation for nighttime driving.",
+      "image": "paper-steps.png",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2302.01334",
+        "Code": "https://github.com/ucaszyp/STEPS",
+        "DOI": "https://doi.org/10.1109/ICRA48891.2023.10160708"
+      }
+    }
+  ]
 };

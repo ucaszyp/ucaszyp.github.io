@@ -1,69 +1,34 @@
-# ucaszyp 的个人主页
+# Yupeng Zheng · 郑宇鹏
 
-一个轻量、支持手机浏览的学术主页。无需安装依赖，也无需运行构建工具。
+Personal academic homepage: https://ucaszyp.github.io/
 
-## 今晚从哪里开始填
+## 修改内容
 
-所有个人资料集中在 **[content.js](content.js)**。
+主要编辑 **content.js**。保存并提交到 `main` 后，GitHub Pages 自动更新。
 
-1. 在 GitHub 打开 `content.js`，点击铅笔按钮编辑。
-2. 修改姓名 `name`、中文名 `nameChinese`、单位 `affiliation`、简介 `introduction` 和 `about`。
-3. 填写邮箱 `email`、学术主页 `scholar`；不需要的字段保持空字符串 `""`。
-4. 参照文件内注释，添加论文 `publications`、动态 `news`、教育或工作经历 `experience`。
-5. 点击 **Commit changes**，提交到 `main`。GitHub Pages 会自动更新。
+- `introduction`：个人简介与导师。
+- `research`：研究方向简介。
+- `photo`：头像文件名。上传新照片到仓库根目录后修改此项。
+- `email` / `cv`：公开邮箱、简历链接；留空时隐藏。
+- `news` / `awards`：动态、奖项。
+- `publications`：论文。`selected: true` 会进入默认精选列表。
+- `status`：使用 `Published`、`Accepted`、`Conditional acceptance` 或 `Preprint`。
+- `image`：论文配图文件名；留空时显示文字封面。
+- `authors`：按论文顺序填写英文全名；`Yupeng Zheng` 自动加粗。
+- `topic`：`Robotics`、`Driving` 或 `3D Perception`，用于筛选。
 
-请只填写准备公开的内容。示例中的论文、职位和单位没有预填，现有项目链接来自账号公开仓库。
-
-## 照片与简历
-
-- 把照片上传为 `assets/photo.jpg`，将 `photo` 改成 `"assets/photo.jpg"`。
-- 把简历上传为 `assets/cv.pdf`，将 `cv` 改成 `"assets/cv.pdf"`。
-- 照片最好使用方形或竖版裁切。未设置照片时显示姓名首字母。
-
-## 填写示例
-
-```javascript
-publications: [
-  {
-    title: "你的论文标题",
-    authors: "你的姓名, 合作者姓名",
-    venue: "会议名称 · 2026",
-    description: "用一句话介绍主要贡献。",
-    links: [
-      { label: "Paper", url: "https://arxiv.org/abs/替换为论文编号" },
-      { label: "Code", url: "https://github.com/ucaszyp/替换为仓库名" },
-    ],
-  },
-],
-```
-
-保留英文引号、逗号和括号；每篇论文是一个 `{ ... }`，不同论文之间用逗号分隔。
-文本会以纯文本显示，不需要写 HTML。
-
-## GitHub Pages 首次发布
-
-1. 在 `ucaszyp` 账号下创建公开仓库 **ucaszyp.github.io**。
-2. 把本目录中的 `index.html`、`style.css`、`app.js`、`content.js`、`favicon.svg`、`.nojekyll` 和本说明上传到仓库根目录。
-3. 打开 **Settings → Pages**。
-4. Source 选择 **Deploy from a branch**。
-5. Branch 选择 **main**，目录选择 **/(root)**，点击 **Save**。
-6. 等待 Pages 部署成功后，访问 [个人主页](https://ucaszyp.github.io/)。
-
-此地址只有在仓库创建且 Pages 部署完成后才可访问。
+外观和布局在 `style.css` 中。页面不需要安装依赖或构建。
 
 ## 本地预览
 
-直接双击 `index.html` 即可浏览。也可在本目录运行 `node preview.mjs`，
-然后访问终端显示的本地地址。
+在仓库目录运行 `node preview.mjs`，打开 http://127.0.0.1:4173/ 。
 
-## 文件说明
+## 内容维护说明
 
-| 文件 | 用途 |
-| --- | --- |
-| `content.js` | 你日常填写和更新的内容 |
-| `index.html` | 主页结构 |
-| `style.css` | 颜色、字体和响应式排版 |
-| `app.js` | 将内容渲染到页面 |
-| `assets/` | 照片、简历等公开素材 |
+2026 年 10 月整理：以作者提供的论文与获奖列表记录发表状态、年份和贡献；
+作者列表与标题参照公开论文页面。WIYH 使用最新公开标题。
+完整研究成果请见主页 Google Scholar 链接。
 
-动态和经历在尚未填写时自动隐藏；论文区保留整理中的提示。
+版式参考 Xiang Li 与 Yuhang Zheng 的学术主页，代码为此主页独立编写。
+论文图片属于对应论文作者，来自公开项目资料；头像来自本人 Google Scholar。
+未公开个人材料原件。
