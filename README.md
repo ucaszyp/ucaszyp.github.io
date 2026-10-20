@@ -43,11 +43,11 @@ publications: [
 ## GitHub Pages 首次发布
 
 1. 在 `ucaszyp` 账号下创建公开仓库 **ucaszyp.github.io**。
-2. 把本目录中的 `index.html`、`style.css`、`app.js`、`content.js`、`.nojekyll`、`assets` 和本说明上传到仓库根目录。
+2. 把本目录中的 `index.html`、`style.css`、`app.js`、`content.js`、`favicon.svg`、`.nojekyll` 和本说明上传到仓库根目录。
 3. 打开 **Settings → Pages**。
 4. Source 选择 **Deploy from a branch**。
 5. Branch 选择 **main**，目录选择 **/(root)**，点击 **Save**。
-6. 等待 Pages 部署成功后，访问 **https://ucaszyp.github.io/**。
+6. 等待 Pages 部署成功后，访问 [个人主页](https://ucaszyp.github.io/)。
 
 此地址只有在仓库创建且 Pages 部署完成后才可访问。
 

@@ -45,7 +45,7 @@ h1 { font-family: var(--serif); font-size: clamp(48px, 6.5vw, 80px); letter-spac
 .portrait-grid { position: absolute; inset: 0; background-image: linear-gradient(#617b5e12 1px, transparent 1px), linear-gradient(90deg, #617b5e12 1px, transparent 1px); background-size: 26px 26px; }
 .portrait-monogram { font-family: var(--serif); color: #59705a; font-size: 112px; font-style: italic; position: relative; }
 .portrait-caption { position: absolute; bottom: 19px; font-size: 8px; letter-spacing: 2px; color: #52634f; }
-.portrait img { width: 100%; height: 100%; object-fit: cover; position: relative; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
 .portrait-note { display: block; text-align: center; font: italic 13px var(--serif); color: #76816f; padding-top: 16px; }
 .section-row { border-top: 1px solid var(--line); padding: 45px 0 50px; display: grid; grid-template-columns: 240px 1fr; gap: 38px; }
 .section-label > span { color: var(--muted); font-size: 9px; letter-spacing: 1.7px; }
