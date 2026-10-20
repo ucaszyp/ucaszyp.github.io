@@ -58,16 +58,12 @@ h1 span { display: inline-block; font-size: 25px; font-weight: 400; letter-spaci
 .filter:hover { background: #f0f4f8; }
 #paper-search { width: 150px; padding: 6px 9px; font-size: 12px; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); background: #fff; }
 .paper-count { color: #8490a0; font-size: 11px; margin: 10px 0 0; }
-.role-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 25px; margin-top: 21px; align-items: start; }
-.role-column { min-width: 0; }
-.role-heading { padding: 12px 0; border-top: 2px solid #a8c1d9; border-bottom: 1px solid var(--line); }
-.role-heading h3 { font-size: 15px; line-height: 1.5; font-weight: 650; color: #264e70; }
-.role-heading p { font-size: 11px; margin-top: 3px; color: var(--muted); }
-.role-columns .publication { grid-template-columns: minmax(0, 1fr); gap: 13px; padding: 22px 0; }
-.role-columns .paper-visual { width: 100%; }
-.role-columns .paper-visual img { height: 148px; }
-.role-columns .publication h3 { font-size: 14px; }
-.role-columns .authors { font-size: 11px; }
+.role-tabs { display: flex; gap: 26px; margin-top: 20px; border-bottom: 1px solid var(--line); }
+.role-tabs[hidden] { display: none; }
+.role-tabs button { border: 0; border-bottom: 2px solid transparent; padding: 10px 2px; margin-bottom: -1px; background: transparent; color: var(--muted); cursor: pointer; font-size: 13px; white-space: nowrap; }
+.role-tabs button[aria-selected="true"] { color: var(--blue); border-bottom-color: var(--blue); font-weight: 650; }
+.role-tabs button:hover { color: var(--blue); }
+.role-tabs span { margin-left: 5px; font-size: 10px; padding: 1px 5px; border-radius: 4px; background: #f0f4f8; }
 .publication { display: grid; grid-template-columns: 195px 1fr; gap: 25px; border-bottom: 1px solid var(--line); padding: 26px 0; }
 .paper-visual { display: flex; align-items: center; justify-content: center; min-height: 130px; align-self: center; background: #fff; border: 1px solid #edf0f3; border-radius: 5px; padding: 6px; overflow: hidden; }
 .paper-visual img { display: block; width: 100%; height: 138px; object-fit: contain; }
@@ -103,8 +99,6 @@ footer a { color: #6e8195; white-space: nowrap; }
 .sr-only, .skip-link:not(:focus) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip-link:focus { display: block; padding: 10px; }
 @media (max-width: 760px) {
-  .role-columns { grid-template-columns: minmax(0, 1fr); gap: 30px; }
-  .role-columns .publication { grid-template-columns: 150px minmax(0, 1fr); gap: 18px; }
   .navigation { padding: 17px 22px; }
   .nav-links { gap: 16px; font-size: 12px; }
   .page { margin: 0; border: 0; padding: 34px 24px 0; }
@@ -122,7 +116,8 @@ footer a { color: #6e8195; white-space: nowrap; }
   .award-detail { display: block; margin: 2px 0 0; }
 }
 @media (max-width: 480px) {
-  .role-columns .publication { grid-template-columns: minmax(0, 1fr); }
+  .role-tabs { gap: 16px; }
+  .role-tabs button { font-size: 12px; }
   body { font-size: 14px; }
   .navigation { padding: 16px 20px; }
   .wordmark { font-size: 15px; }

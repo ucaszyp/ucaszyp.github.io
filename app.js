@@ -2,6 +2,8 @@ const profile = window.PROFILE;
 const list = document.querySelector("#publication-list");
 const search = document.querySelector("#paper-search");
 let activeFilter = "selected";
+let activeGroup = "first";
+const roleTabs = document.querySelector("#role-tabs");
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -126,36 +128,51 @@ function renderPublications() {
   const query = search.value.trim().toLowerCase();
   const papers = profile.publications.filter((paper) => {
     const matchesFilter = activeFilter === "all"
-      || (activeFilter === "selected" ? paper.selected : paper.topic === activeFilter);
+      || (activeFilter === "selected"
+        ? paper.selected && paper.group === activeGroup
+        : paper.topic === activeFilter);
     const searchable = [paper.title, paper.short, paper.venue, paper.year, paper.role, ...paper.authors].join(" ").toLowerCase();
     return matchesFilter && (!query || searchable.includes(query));
   });
-  list.classList.toggle("role-columns", activeFilter === "selected");
-  list.replaceChildren();
-  if (activeFilter === "selected" && papers.length) {
-    const groups = [
-      { id: "first", title: "First author", chinese: "第一作者" },
-      { id: "corresponding", title: "Corresponding author", chinese: "通讯作者" },
-      { id: "lead", title: "Co-first / Project Leader", chinese: "共同一作 / 项目负责人" },
-    ];
-    for (const group of groups) {
-      const members = papers.filter((paper) => paper.group === group.id);
-      const column = element("section", "role-column");
-      column.setAttribute("aria-label", group.title);
-      const heading = element("div", "role-heading");
-      heading.append(element("h3", "", group.title));
-      heading.append(element("p", "", `${group.chinese} · ${members.length}`));
-      column.append(heading, ...members.map(paperCard));
-      if (!members.length) column.append(element("p", "empty-state", "No matching papers."));
-      list.append(column);
-    }
+  roleTabs.hidden = activeFilter !== "selected";
+  if (activeFilter === "selected") {
+    list.setAttribute("role", "tabpanel");
+    list.setAttribute("aria-labelledby", `tab-${activeGroup}`);
   } else {
-    list.append(...papers.map(paperCard));
+    list.removeAttribute("role");
+    list.removeAttribute("aria-labelledby");
   }
+  list.replaceChildren(...papers.map(paperCard));
   if (!papers.length) {
     list.append(element("p", "empty-state", "No matching papers. Try another keyword or select All papers."));
   }
   document.querySelector("#paper-count").textContent = `${papers.length} of ${profile.publications.length} featured publications`;
+}
+const contributionTabs = Array.from(roleTabs.querySelectorAll('[role="tab"]'));
+function selectContribution(tab) {
+  activeGroup = tab.dataset.group;
+  for (const item of contributionTabs) {
+    const selected = item === tab;
+    item.setAttribute("aria-selected", String(selected));
+    item.tabIndex = selected ? 0 : -1;
+  }
+  renderPublications();
+}
+for (const [index, tab] of contributionTabs.entries()) {
+  const count = profile.publications.filter((paper) => paper.selected && paper.group === tab.dataset.group).length;
+  tab.querySelector("span").textContent = count;
+  tab.addEventListener("click", () => selectContribution(tab));
+  tab.addEventListener("keydown", (event) => {
+    let next;
+    if (event.key === "ArrowRight") next = (index + 1) % contributionTabs.length;
+    if (event.key === "ArrowLeft") next = (index + contributionTabs.length - 1) % contributionTabs.length;
+    if (event.key === "Home") next = 0;
+    if (event.key === "End") next = contributionTabs.length - 1;
+    if (next === undefined) return;
+    event.preventDefault();
+    selectContribution(contributionTabs[next]);
+    contributionTabs[next].focus();
+  });
 }
 for (const button of document.querySelectorAll(".filter")) {
   button.addEventListener("click", () => {
