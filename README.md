@@ -12,8 +12,9 @@ Personal academic homepage: https://ucaszyp.github.io/
 - `email` / `cv`：公开邮箱、简历链接；留空时隐藏。
 - `news` / `awards`：动态、奖项。
 - `publications`：论文。`selected: true` 会进入默认精选列表。
+- `group`：精选三栏分组，`first` 为一作，`corresponding` 为通讯，`lead` 为共一 / Project Leader；每篇只归入一栏。
 - `status`：使用 `Published`、`Accepted`、`Conditional acceptance` 或 `Preprint`。
-- `image`：论文配图文件名；留空时显示文字封面。
+- `image`：从论文提取的配图文件名；`figureSource` 为原论文 PDF 页链接。各图来源见 FIGURES.md。
 - `authors`：按论文顺序填写英文全名；`Yupeng Zheng` 自动加粗。
 - `topic`：`Robotics`、`Driving` 或 `3D Perception`，用于筛选。
 

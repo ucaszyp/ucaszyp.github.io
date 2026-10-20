@@ -76,12 +76,12 @@ function authorList(authors) {
 function paperCard(paper) {
   const article = element("article", "publication");
   article.id = `paper-${paper.id}`;
-  const visual = link("", paper.links.arXiv, "paper-visual");
-  visual.setAttribute("aria-label", `${paper.short}: view paper`);
+  const visual = link("", paper.figureSource || paper.links.arXiv, "paper-visual");
+  visual.setAttribute("aria-label", `${paper.short}: view figure in the paper`);
   if (paper.image) {
     const image = element("img");
     image.src = paper.image;
-    image.alt = `${paper.short} research overview`;
+    image.alt = paper.imageAlt || `${paper.short} research overview`;
     image.loading = "lazy";
     image.width = 195;
     image.height = 138;
@@ -130,7 +130,28 @@ function renderPublications() {
     const searchable = [paper.title, paper.short, paper.venue, paper.year, paper.role, ...paper.authors].join(" ").toLowerCase();
     return matchesFilter && (!query || searchable.includes(query));
   });
-  list.replaceChildren(...papers.map(paperCard));
+  list.classList.toggle("role-columns", activeFilter === "selected");
+  list.replaceChildren();
+  if (activeFilter === "selected" && papers.length) {
+    const groups = [
+      { id: "first", title: "First author", chinese: "第一作者" },
+      { id: "corresponding", title: "Corresponding author", chinese: "通讯作者" },
+      { id: "lead", title: "Co-first / Project Leader", chinese: "共同一作 / 项目负责人" },
+    ];
+    for (const group of groups) {
+      const members = papers.filter((paper) => paper.group === group.id);
+      const column = element("section", "role-column");
+      column.setAttribute("aria-label", group.title);
+      const heading = element("div", "role-heading");
+      heading.append(element("h3", "", group.title));
+      heading.append(element("p", "", `${group.chinese} · ${members.length}`));
+      column.append(heading, ...members.map(paperCard));
+      if (!members.length) column.append(element("p", "empty-state", "No matching papers."));
+      list.append(column);
+    }
+  } else {
+    list.append(...papers.map(paperCard));
+  }
   if (!papers.length) {
     list.append(element("p", "empty-state", "No matching papers. Try another keyword or select All papers."));
   }

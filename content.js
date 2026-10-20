@@ -94,12 +94,17 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "An open ecosystem of in-the-wild human manipulation data, wearable collection hardware, and benchmarks for learning robot skills.",
-      "image": "paper-wiyh.png",
+      "image": "figure-wiyh.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2512.24310",
         "Project": "https://wiyh.tars-ai.com/",
         "Code": "https://github.com/tars-robotics/World-In-Your-Hands"
-      }
+      },
+      "imageAlt": "WIYH, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2512.24310#page=1",
+      "group": "first"
     },
     {
       "id": "gift",
@@ -128,11 +133,16 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "Guiding intermediate policy features with geometry, affordances, and goals to improve robotic manipulation.",
-      "image": "paper-gift.png",
+      "image": "figure-gift.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2609.04193",
         "Project": "https://openphoenix-team.github.io/GIFT-pages"
-      }
+      },
+      "imageAlt": "GIFT, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 4,
+      "figureSource": "https://arxiv.org/pdf/2609.04193#page=4",
+      "group": "first"
     },
     {
       "id": "pokevla",
@@ -162,11 +172,16 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "Bringing spatial understanding and manipulation knowledge to compact vision-language-action models.",
-      "image": "paper-pokevla.png",
+      "image": "figure-pokevla.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2604.20834",
         "Project": "https://getterupper.github.io/PokeVLA"
-      }
+      },
+      "imageAlt": "PokéVLA, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 3,
+      "figureSource": "https://arxiv.org/pdf/2604.20834#page=3",
+      "group": "first"
     },
     {
       "id": "lawa",
@@ -193,13 +208,18 @@ window.PROFILE = {
       "status": "Preprint",
       "topic": "Robotics",
       "role": "Corresponding author",
-      "selected": false,
+      "selected": true,
       "description": "Compact latent actions preserve future imagination while reducing the inference cost of world action models.",
-      "image": "paper-lawa.png",
+      "image": "figure-lawa.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2608.24882",
         "Project": "https://getterupper.github.io/LAWA"
-      }
+      },
+      "imageAlt": "LAWA, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 2,
+      "figureSource": "https://arxiv.org/pdf/2608.24882#page=2",
+      "group": "corresponding"
     },
     {
       "id": "interaction",
@@ -224,13 +244,18 @@ window.PROFILE = {
       "status": "Preprint",
       "topic": "Robotics",
       "role": "Corresponding author",
-      "selected": false,
+      "selected": true,
       "description": "Representing motion, contact, and force evolution as shared action units for contact-rich manipulation.",
-      "image": "",
+      "image": "figure-interaction.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2610.18855",
         "Project": "https://mrsecant.github.io/ILA/"
-      }
+      },
+      "imageAlt": "ILA, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 2,
+      "figureSource": "https://arxiv.org/pdf/2610.18855#page=2",
+      "group": "corresponding"
     },
     {
       "id": "vtwam",
@@ -253,13 +278,18 @@ window.PROFILE = {
       "status": "Preprint",
       "topic": "Robotics",
       "role": "Project lead",
-      "selected": false,
+      "selected": true,
       "description": "Joint visual, tactile, and action prediction for contact-aware robot control.",
-      "image": "",
+      "image": "figure-vtwam.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2607.02503",
         "Project": "https://vt-wam.github.io/"
-      }
+      },
+      "imageAlt": "VT-WAM, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 3,
+      "figureSource": "https://arxiv.org/pdf/2607.02503#page=3",
+      "group": "lead"
     },
     {
       "id": "tacforesight",
@@ -282,13 +312,18 @@ window.PROFILE = {
       "status": "Preprint",
       "topic": "Robotics",
       "role": "Project lead",
-      "selected": false,
+      "selected": true,
       "description": "Force-guided tactile dynamics provide anticipatory contact information for real-time manipulation.",
-      "image": "",
+      "image": "figure-tacforesight.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2606.11184",
         "Project": "https://tacforesight.github.io/ProjectPage"
-      }
+      },
+      "imageAlt": "TacForeSight, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2606.11184#page=1",
+      "group": "lead"
     },
     {
       "id": "omnivta",
@@ -315,13 +350,18 @@ window.PROFILE = {
       "status": "Conditional acceptance",
       "topic": "Robotics",
       "role": "Corresponding author",
-      "selected": false,
+      "selected": true,
       "description": "Visuo-tactile world modeling and closed-loop feedback for contact-rich manipulation.",
-      "image": "",
+      "image": "figure-omnivta.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2603.19201",
         "Project": "https://mrsecant.github.io/OmniVTA"
-      }
+      },
+      "imageAlt": "OmniVTA, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2603.19201#page=1",
+      "group": "corresponding"
     },
     {
       "id": "drivevla",
@@ -347,14 +387,19 @@ window.PROFILE = {
       "status": "Accepted",
       "topic": "Driving",
       "role": "Co-first author",
-      "selected": false,
+      "selected": true,
       "description": "A failure-aware memory helps driving VLAs retrieve experience and adapt to challenging scenarios.",
-      "image": "",
+      "image": "figure-drivevla.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2608.10413",
         "Code": "https://github.com/ZebinX/DriveVLA-M0",
         "DOI": "https://doi.org/10.1145/3767308.3835233"
-      }
+      },
+      "imageAlt": "DriveVLA-M0, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2608.10413#page=1",
+      "group": "lead"
     },
     {
       "id": "latentwam",
@@ -383,13 +428,18 @@ window.PROFILE = {
       "status": "Accepted",
       "topic": "Driving",
       "role": "Co-first author · Project lead",
-      "selected": false,
+      "selected": true,
       "description": "Compact, spatially aware latent world representations for end-to-end trajectory planning.",
-      "image": "",
+      "image": "figure-latentwam.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2603.24581",
         "Code": "https://github.com/yukki555/Latent-WAM"
-      }
+      },
+      "imageAlt": "Latent-WAM, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 3,
+      "figureSource": "https://arxiv.org/pdf/2603.24581#page=3",
+      "group": "lead"
     },
     {
       "id": "dreamerad",
@@ -416,12 +466,17 @@ window.PROFILE = {
       "status": "Accepted",
       "topic": "Driving",
       "role": "Project lead",
-      "selected": false,
+      "selected": true,
       "description": "Efficient reinforcement learning for driving through fast latent-world imagination.",
-      "image": "",
+      "image": "figure-dreamerad.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2603.24587"
-      }
+      },
+      "imageAlt": "DreamerAD, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 2,
+      "figureSource": "https://arxiv.org/pdf/2603.24587#page=2",
+      "group": "lead"
     },
     {
       "id": "scaling",
@@ -446,14 +501,19 @@ window.PROFILE = {
       "status": "Published",
       "topic": "Driving",
       "role": "First author",
-      "selected": false,
+      "selected": true,
       "description": "Studying how data quantity and distribution affect generalization in imitation-based autonomous driving.",
-      "image": "",
+      "image": "figure-scaling.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2412.02689",
         "Code": "https://github.com/ucaszyp/Driving-Scaling-Law",
         "DOI": "https://doi.org/10.1109/ICRA57385.2026.11696016"
-      }
+      },
+      "imageAlt": "Data Scaling Laws, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2412.02689#page=1",
+      "group": "first"
     },
     {
       "id": "planagent",
@@ -479,12 +539,17 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "Multimodal reasoning and reflection for closed-loop vehicle motion planning.",
-      "image": "paper-planagent.png",
+      "image": "figure-planagent.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2406.01587",
         "Code": "https://github.com/ucaszyp/PlanAgent",
         "DOI": "https://doi.org/10.1109/TCDS.2026.3664120"
-      }
+      },
+      "imageAlt": "PlanAgent, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 4,
+      "figureSource": "https://arxiv.org/pdf/2406.01587#page=4",
+      "group": "first"
     },
     {
       "id": "mimir",
@@ -505,14 +570,19 @@ window.PROFILE = {
       "status": "Published",
       "topic": "Driving",
       "role": "Project lead",
-      "selected": false,
+      "selected": true,
       "description": "Hierarchical goal-driven diffusion with uncertainty-aware guidance for robust driving trajectories.",
-      "image": "",
+      "image": "figure-mimir.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2512.07130",
         "Code": "https://github.com/ZebinX/Mimir-Uncertainty-Driving",
         "DOI": "https://doi.org/10.1109/LRA.2025.3641129"
-      }
+      },
+      "imageAlt": "Mimir, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2512.07130#page=1",
+      "group": "lead"
     },
     {
       "id": "world4drive",
@@ -539,12 +609,17 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "Intention-aware latent world models enable end-to-end planning without manual perception annotations.",
-      "image": "",
+      "image": "figure-world4drive.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2507.00603",
         "Code": "https://github.com/ucaszyp/World4Drive",
         "Paper": "https://openaccess.thecvf.com/content/ICCV2025/html/Zheng_World4Drive_End-to-End_Autonomous_Driving_via_Intention-aware_Physical_Latent_World_Model_ICCV_2025_paper.html"
-      }
+      },
+      "imageAlt": "World4Drive, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 3,
+      "figureSource": "https://arxiv.org/pdf/2507.00603#page=3",
+      "group": "first"
     },
     {
       "id": "discene",
@@ -563,14 +638,19 @@ window.PROFILE = {
       "status": "Published",
       "topic": "3D Perception",
       "role": "Project lead",
-      "selected": false,
+      "selected": true,
       "description": "Sparse queries and multi-level knowledge distillation for efficient indoor occupancy prediction.",
-      "image": "paper-discene.png",
+      "image": "figure-discene.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2602.02318",
         "Code": "https://github.com/getterupper/DiScene",
         "DOI": "https://doi.org/10.1109/LRA.2025.3615532"
-      }
+      },
+      "imageAlt": "DiScene, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 3,
+      "figureSource": "https://arxiv.org/pdf/2602.02318#page=3",
+      "group": "lead"
     },
     {
       "id": "uncad",
@@ -592,14 +672,19 @@ window.PROFILE = {
       "status": "Published",
       "topic": "Driving",
       "role": "Co-first author",
-      "selected": false,
+      "selected": true,
       "description": "Using online map uncertainty to improve the safety of end-to-end driving.",
-      "image": "",
+      "image": "figure-uncad.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2504.12826",
         "Code": "https://github.com/pengxuanyang/UncAD",
         "DOI": "https://doi.org/10.1109/ICRA55743.2025.11128148"
-      }
+      },
+      "imageAlt": "UncAD, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 3,
+      "figureSource": "https://arxiv.org/pdf/2504.12826#page=3",
+      "group": "lead"
     },
     {
       "id": "tod3cap",
@@ -627,15 +712,20 @@ window.PROFILE = {
       "status": "Published",
       "topic": "3D Perception",
       "role": "Corresponding author",
-      "selected": false,
+      "selected": true,
       "description": "A dataset and framework for describing 3D objects in outdoor scenes with natural language.",
-      "image": "paper-tod3cap.png",
+      "image": "figure-tod3cap.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2403.19589",
         "Project": "https://jxbbb.github.io/TOD3Cap",
         "Code": "https://github.com/jxbbb/TOD3Cap",
         "DOI": "https://doi.org/10.1007/978-3-031-72649-1_21"
-      }
+      },
+      "imageAlt": "TOD3Cap, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2403.19589#page=1",
+      "group": "corresponding"
     },
     {
       "id": "monoocc",
@@ -659,12 +749,17 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "Recovering semantic 3D occupancy from monocular images with visual guidance and knowledge distillation.",
-      "image": "paper-monoocc.png",
+      "image": "figure-monoocc.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2403.08766",
         "Code": "https://github.com/ucaszyp/MonoOcc",
         "DOI": "https://doi.org/10.1109/ICRA57147.2024.10611261"
-      }
+      },
+      "imageAlt": "MonoOcc, Figure 2 from the paper",
+      "figure": 2,
+      "figurePage": 3,
+      "figureSource": "https://arxiv.org/pdf/2403.08766#page=3",
+      "group": "first"
     },
     {
       "id": "steps",
@@ -690,12 +785,17 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "Joint self-supervised image enhancement and depth estimation for nighttime driving.",
-      "image": "paper-steps.png",
+      "image": "figure-steps.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2302.01334",
         "Code": "https://github.com/ucaszyp/STEPS",
         "DOI": "https://doi.org/10.1109/ICRA48891.2023.10160708"
-      }
+      },
+      "imageAlt": "STEPS, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 1,
+      "figureSource": "https://arxiv.org/pdf/2302.01334#page=1",
+      "group": "first"
     }
   ]
 };

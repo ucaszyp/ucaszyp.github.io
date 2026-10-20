@@ -11,6 +11,7 @@ const types = {
   ".svg": "image/svg+xml",
   ".jpg": "image/jpeg",
   ".png": "image/png",
+  ".webp": "image/webp",
   ".pdf": "application/pdf",
 };
 
