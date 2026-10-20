@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ucaszyp 的个人主页：研究、开源项目与思考。">
+    <meta name="theme-color" content="#f8f7f3">
+    <title>ucaszyp · Personal Homepage</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="content.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转到正文</a>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="返回首页">
+        <span class="brand-dot"></span><span data-name>ucaszyp</span><span class="muted"> / </span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#publications">论文</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-name">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="small-dot"></span> PERSONAL HOMEPAGE</p>
+          <h1 id="hero-name">ucaszyp<span class="accent">.</span></h1>
+          <p id="name-chinese" class="name-chinese" hidden></p>
+          <p id="tagline" class="tagline">Research, projects &amp; notes.</p>
+          <p id="affiliation" class="affiliation" hidden></p>
+          <p id="introduction" class="introduction"></p>
+          <div id="profile-links" class="profile-links"></div>
+        </div>
+        <div class="portrait-frame">
+          <div class="portrait" id="portrait">
+            <div class="portrait-grid" aria-hidden="true"></div>
+            <span class="portrait-monogram" id="monogram" aria-hidden="true">U.</span>
+            <span class="portrait-caption" aria-hidden="true">A WORK IN PROGRESS</span>
+          </div>
+          <span class="portrait-note">Stay curious. Keep exploring.</span>
+        </div>
+      </section>
+      <section class="section-row" id="about" aria-labelledby="about-heading">
+        <div class="section-label"><span>01 / ABOUT</span><h2 id="about-heading">关于我</h2></div>
+        <div class="section-content">
+          <div id="about-text" class="prose"></div>
+          <div id="interests" class="tags"></div>
+        </div>
+      </section>
+      <section class="section-row" id="news-section" aria-labelledby="news-heading" hidden>
+        <div class="section-label"><span>UPDATES</span><h2 id="news-heading">最近动态</h2></div>
+        <div id="news" class="section-content"></div>
+      </section>
+      <section class="section-row" id="publications" aria-labelledby="papers-heading">
+        <div class="section-label"><span>02 / PUBLICATIONS</span><h2 id="papers-heading">论文发表</h2></div>
+        <div id="papers" class="section-content">
+          <div class="empty-state"><span class="empty-symbol" aria-hidden="true">↗</span><p>研究成果，陆续整理中。</p><span>Selected publications will be added here.</span></div>
+        </div>
+      </section>
+      <section class="section-row" id="projects" aria-labelledby="projects-heading">
+        <div class="section-label"><span>03 / OPEN SOURCE</span><h2 id="projects-heading">开源项目</h2><p>From ideas to code.</p></div>
+        <div id="project-list" class="section-content"></div>
+      </section>
+      <section class="section-row" id="experience-section" aria-labelledby="experience-heading" hidden>
+        <div class="section-label"><span>EXPERIENCE</span><h2 id="experience-heading">教育与经历</h2></div>
+        <div id="experience" class="section-content"></div>
+      </section>
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2 id="contact-heading">保持联系<span class="accent">.</span></h2>
+        <p id="contact-text"></p>
+        <div id="contact-links" class="profile-links"></div>
+      </section>
+    </main>
+    <footer>
+      <span>© <span id="year"></span> <span data-name>ucaszyp</span></span>
+      <span>Built with curiosity. <a href="#home" aria-label="回到顶部">↑</a></span>
+    </footer>
+    <noscript><p class="noscript">请启用 JavaScript 查看完整主页。你也可以访问 <a href="https://github.com/ucaszyp">GitHub</a>。</p></noscript>
+  </body>
+</html>
+
