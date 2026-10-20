@@ -127,10 +127,9 @@ function paperCard(paper) {
 function renderPublications() {
   const query = search.value.trim().toLowerCase();
   const papers = profile.publications.filter((paper) => {
-    const matchesFilter = activeFilter === "all"
-      || (activeFilter === "selected"
+    const matchesFilter = activeFilter === "selected"
         ? paper.selected && paper.group === activeGroup
-        : paper.topic === activeFilter);
+        : paper.topic === activeFilter;
     const searchable = [paper.title, paper.short, paper.venue, paper.year, paper.role, ...paper.authors].join(" ").toLowerCase();
     return matchesFilter && (!query || searchable.includes(query));
   });
@@ -144,7 +143,7 @@ function renderPublications() {
   }
   list.replaceChildren(...papers.map(paperCard));
   if (!papers.length) {
-    list.append(element("p", "empty-state", "No matching papers. Try another keyword or select All papers."));
+    list.append(element("p", "empty-state", "No matching papers. Try another keyword or switch tabs."));
   }
   document.querySelector("#paper-count").textContent = `${papers.length} of ${profile.publications.length} featured publications`;
 }

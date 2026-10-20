@@ -308,8 +308,8 @@ window.PROFILE = {
         "Wenchao Ding"
       ],
       "year": 2026,
-      "venue": "arXiv",
-      "status": "Preprint",
+      "venue": "IEEE RA-L",
+      "status": "Accepted",
       "topic": "Robotics",
       "role": "Project lead",
       "selected": true,
