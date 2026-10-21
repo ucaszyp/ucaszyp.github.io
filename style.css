@@ -88,6 +88,13 @@ h1 span { display: inline-block; font-size: 25px; font-weight: 400; letter-spaci
 .role { color: #7a8490; font-size: 10px; }
 .description { color: #576475; font-size: 12px; line-height: 1.7; margin-top: 7px; }
 .paper-links { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 9px; font-size: 11px; font-weight: 600; }
+.paper-highlight { display: inline-block; color: #9b421c; background: #fff1e8; border-radius: 4px; padding: 2px 8px; margin-bottom: 8px; font-size: 11px; font-weight: 700; }
+.publication-highlight .role { color: #9b421c; font-size: 12px; font-weight: 700; }
+.publication-highlight .paper-visual img { height: auto; }
+.benchmark-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 14px; margin: 14px 0 10px; }
+.benchmark-results dt { font-size: 10px; color: var(--muted); }
+.benchmark-results dd { margin: 0; color: #244c6c; font-size: 17px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.results-note { color: var(--muted); font-size: 10px; line-height: 1.6; }
 .empty-state { padding: 30px 0; color: var(--muted); }
 .awards-section { padding: 35px 0 28px; }
 .awards-list li { display: grid; grid-template-columns: 46px 1fr; gap: 16px; padding: 9px 0; font-size: 13px; }

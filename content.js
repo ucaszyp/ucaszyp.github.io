@@ -7,7 +7,7 @@ window.PROFILE = {
   "affiliation": "Institute of Automation, Chinese Academy of Sciences",
   "affiliationChinese": "中国科学院自动化研究所",
   "introduction": "I work on embodied intelligence at the Institute of Automation, Chinese Academy of Sciences, advised by Dongbin Zhao (赵冬斌) and Qichao Zhang (张启超).",
-  "research": "My research spans robotic manipulation, world models, and autonomous driving. I study how agents can learn useful representations of the physical world and turn them into reliable actions, with recent work on vision-language-action models, visuo-tactile learning, and latent world models.",
+  "research": "My research spans robotic manipulation, world models, and autonomous driving. I study how agents can learn useful representations of the physical world and turn them into reliable actions, with recent work on vision-language-action models, visuo-tactile learning, and latent world models. I am the first author and project leader of Phoenix, which achieves state-of-the-art results across multiple robotic manipulation benchmarks.",
   "photo": "portrait.jpg",
   "email": "",
   "cv": "",
@@ -15,6 +15,10 @@ window.PROFILE = {
   "github": "https://github.com/ucaszyp",
   "updated": "October 2026",
   "news": [
+    {
+      "date": "2026",
+      "text": "Phoenix released: multi-benchmark SOTA in the project report, including LIBERO-Plus (94.63%), LIBERO-Pro (66.48%), and RoboCasa-GR1 (82.67%). First Author & Project Leader."
+    },
     {
       "date": "2026",
       "text": "World In Your Hands (WIYH) accepted to CoRL 2026."
@@ -56,6 +60,63 @@ window.PROFILE = {
     }
   ],
   "publications": [
+    {
+      "id": "phoenix",
+      "short": "Phoenix",
+      "title": "Phoenix: Scaling Robotic Manipulation through Visual and Interaction Representations",
+      "authors": [
+        "Yupeng Zheng"
+      ],
+      "authorsSuffix": ", et al.",
+      "year": 2026,
+      "venue": "Technical Report",
+      "status": "Released",
+      "topic": "Robotics",
+      "role": "First Author · Project Leader",
+      "selected": true,
+      "group": "first",
+      "groups": [
+        "first",
+        "lead"
+      ],
+      "highlight": "Multi-benchmark SOTA",
+      "description": "A world-action model that scales robotic manipulation through visual and interaction representations, large-scale pretraining, and cross-embodiment learning.",
+      "results": [
+        {
+          "benchmark": "LIBERO-Plus",
+          "score": "94.63%"
+        },
+        {
+          "benchmark": "LIBERO-Pro",
+          "score": "66.48%"
+        },
+        {
+          "benchmark": "RoboCasa-GR1",
+          "score": "82.67%"
+        },
+        {
+          "benchmark": "RoboTwin 2.0 C2R",
+          "score": "72.42%"
+        },
+        {
+          "benchmark": "Bench2Dex",
+          "score": "45.6%"
+        },
+        {
+          "benchmark": "RoboDojo-RealWorld",
+          "score": "26.11%"
+        }
+      ],
+      "resultsNote": "Best reported success rates among the open-source methods compared in the project report (October 2026); benchmark settings follow the report.",
+      "image": "figure-phoenix.webp",
+      "imageAlt": "Phoenix-MWA comparison with previous open-source SOTA and π0.5 across six manipulation benchmarks",
+      "figureSource": "https://openphoenix-team.github.io/Phoenix-pages/#overview",
+      "links": {
+        "Project / Report": "https://openphoenix-team.github.io/Phoenix-pages/",
+        "Code": "https://github.com/Anyverse-Dynamics/Phoenix-MWA",
+        "Benchmark results": "https://openphoenix-team.github.io/Phoenix-pages/#section-5"
+      }
+    },
     {
       "id": "wiyh",
       "short": "WIYH",

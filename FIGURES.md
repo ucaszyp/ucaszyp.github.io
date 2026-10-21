@@ -24,3 +24,5 @@ Figures extracted from the authors' public papers, with original labels preserve
 | TOD3Cap | 1 | 1 | [PDF](https://arxiv.org/pdf/2403.19589#page=1) |
 | MonoOcc | 2 | 3 | [PDF](https://arxiv.org/pdf/2403.08766#page=3) |
 | STEPS | 1 | 1 | [PDF](https://arxiv.org/pdf/2302.01334#page=1) |
+
+Phoenix: Figure 1 (six-benchmark comparison), copied unchanged from the [official project report](https://openphoenix-team.github.io/Phoenix-pages/#overview). Scores and SOTA scope follow the report as of October 21, 2026. The first-author and project-leader roles were supplied by Yupeng Zheng.

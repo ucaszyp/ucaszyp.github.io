@@ -77,6 +77,7 @@ function authorList(authors) {
 
 function paperCard(paper) {
   const article = element("article", "publication");
+  if (paper.highlight) article.classList.add("publication-highlight");
   article.id = `paper-${paper.id}`;
   const visual = link("", paper.figureSource || paper.links.arXiv, "paper-visual");
   visual.setAttribute("aria-label", `${paper.short}: view figure in the paper`);
@@ -96,9 +97,10 @@ function paperCard(paper) {
   }
   const body = element("div", "paper-body");
   const title = element("h3");
-  title.append(link(paper.title, paper.links.Paper || paper.links.arXiv));
+  title.append(link(paper.title, paper.links.Paper || paper.links.arXiv || paper.links["Project / Report"]));
   const authors = element("div", "authors");
   authors.append(authorList(paper.authors.slice(0, 6)));
+  if (paper.authorsSuffix) authors.append(document.createTextNode(paper.authorsSuffix));
   if (paper.authors.length > 6) {
     authors.append(document.createTextNode(", et al. "));
     const details = element("details", "author-details");
@@ -120,6 +122,16 @@ function paperCard(paper) {
     links.append(link(label, url));
   }
   body.append(title, authors, venue, element("p", "description", paper.description), links);
+  if (paper.highlight) body.prepend(element("p", "paper-highlight", paper.highlight));
+  if (paper.results) {
+    const results = element("dl", "benchmark-results");
+    for (const result of paper.results) {
+      const item = element("div");
+      item.append(element("dt", "", result.benchmark), element("dd", "", result.score));
+      results.append(item);
+    }
+    links.before(results, element("p", "results-note", paper.resultsNote));
+  }
   article.append(visual, body);
   return article;
 }
@@ -128,7 +140,7 @@ function renderPublications() {
   const query = search.value.trim().toLowerCase();
   const papers = profile.publications.filter((paper) => {
     const matchesFilter = activeFilter === "selected"
-        ? paper.selected && paper.group === activeGroup
+        ? paper.selected && (paper.groups || [paper.group]).includes(activeGroup)
         : paper.topic === activeFilter;
     const searchable = [paper.title, paper.short, paper.venue, paper.year, paper.role, ...paper.authors].join(" ").toLowerCase();
     return matchesFilter && (!query || searchable.includes(query));
@@ -158,7 +170,7 @@ function selectContribution(tab) {
   renderPublications();
 }
 for (const [index, tab] of contributionTabs.entries()) {
-  const count = profile.publications.filter((paper) => paper.selected && paper.group === tab.dataset.group).length;
+  const count = profile.publications.filter((paper) => paper.selected && (paper.groups || [paper.group]).includes(tab.dataset.group)).length;
   tab.querySelector("span").textContent = count;
   tab.addEventListener("click", () => selectContribution(tab));
   tab.addEventListener("keydown", (event) => {
