@@ -17,7 +17,7 @@ window.PROFILE = {
   "news": [
     {
       "date": "2026",
-      "text": "Phoenix released: multi-benchmark SOTA in the project report, including LIBERO-Plus (94.63%), LIBERO-Pro (66.48%), and RoboCasa-GR1 (82.67%). First Author & Project Leader."
+      "text": "Phoenix released: SOTA across six benchmarks among the open-source methods compared in the project report: LIBERO-Plus (94.63%), LIBERO-Pro (66.48%), RoboCasa-GR1 (82.67%), RoboTwin 2.0 C2R (72.42%), Bench2Dex (45.6%), and RoboDojo-RealWorld (26.11%). First Author & Project Leader."
     },
     {
       "date": "2026",
