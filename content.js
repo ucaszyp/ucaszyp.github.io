@@ -113,7 +113,7 @@ window.PROFILE = {
       "figureSource": "https://openphoenix-team.github.io/Phoenix-pages/#overview",
       "links": {
         "Project / Report": "https://openphoenix-team.github.io/Phoenix-pages/",
-        "Code": "https://github.com/Anyverse-Dynamics/Phoenix-MWA",
+        "Code": "https://github.com/OpenPhoenix-Team/Phoenix-MWA",
         "Benchmark results": "https://openphoenix-team.github.io/Phoenix-pages/#section-5"
       }
     },
