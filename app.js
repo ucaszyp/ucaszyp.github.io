@@ -53,7 +53,11 @@ for (const item of profile.news) {
   const row = element("li");
   const date = element("time", "", item.date);
   date.dateTime = item.date;
-  row.append(date, element("span", "", item.text));
+  const copy = element("span", "", item.text);
+  if (item.url) {
+    copy.append(" ", link(item.linkLabel || "Read more", item.url));
+  }
+  row.append(date, copy);
   document.querySelector("#news").append(row);
 }
 for (const award of profile.awards) {

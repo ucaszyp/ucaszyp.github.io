@@ -16,6 +16,12 @@ window.PROFILE = {
   "updated": "October 2026",
   "news": [
     {
+      "date": "2026-10",
+      "text": "PlanAgent was featured in the Research Frontier section of IEEE CIS Newsletter, Issue 165 (October 2026).",
+      "linkLabel": "Read the newsletter",
+      "url": "https://engage.ieee.org/index.php/email/emailWebview?email=NzU2LUdQSC04OTkAAAGlIChiWqfpvjs7KWmVmplkUwlDjMDJIA5rIFd3DRHGY6Su3bAi3EAsBcfoAixhT3CT5qfVFbNtxhxLMtxaJXzGBvKCgcG2FPOsxK8"
+    },
+    {
       "date": "2026",
       "text": "Phoenix released: SOTA across six benchmarks among the open-source methods compared in the project report: LIBERO-Plus (94.63%), LIBERO-Pro (66.48%), RoboCasa-GR1 (82.67%), RoboTwin 2.0 C2R (72.42%), Bench2Dex (45.6%), and RoboDojo-RealWorld (26.11%). First Author & Project Leader."
     },
@@ -600,11 +606,13 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "Multimodal reasoning and reflection for closed-loop vehicle motion planning.",
+      "highlight": "Featured in Research Frontier · IEEE CIS Newsletter, October 2026",
       "image": "figure-planagent.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2406.01587",
         "Code": "https://github.com/ucaszyp/PlanAgent",
-        "DOI": "https://doi.org/10.1109/TCDS.2026.3664120"
+        "DOI": "https://doi.org/10.1109/TCDS.2026.3664120",
+        "IEEE CIS Newsletter": "https://engage.ieee.org/index.php/email/emailWebview?email=NzU2LUdQSC04OTkAAAGlIChiWqfpvjs7KWmVmplkUwlDjMDJIA5rIFd3DRHGY6Su3bAi3EAsBcfoAixhT3CT5qfVFbNtxhxLMtxaJXzGBvKCgcG2FPOsxK8"
       },
       "imageAlt": "PlanAgent, Figure 2 from the paper",
       "figure": 2,
