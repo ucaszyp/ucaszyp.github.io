@@ -30,11 +30,11 @@ window.PROFILE = {
       "text": "World In Your Hands (WIYH) was accepted to CoRL 2026 in September. The dataset has approximately 450,000 downloads on Hugging Face as of October 2026."
     },
     {
-      "date": "2026",
+      "date": "2026-07",
       "text": "DriveVLA-M0 and Latent-WAM accepted to ACM MM 2026; DreamerAD accepted to ECCV 2026."
     },
     {
-      "date": "2026",
+      "date": "2026-07",
       "text": "New work on robot learning: GIFT, PokéVLA, LAWA, VT-WAM, and interaction latents."
     }
   ],
