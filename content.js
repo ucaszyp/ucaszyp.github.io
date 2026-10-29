@@ -121,7 +121,8 @@ window.PROFILE = {
         "Project / Report": "https://openphoenix-team.github.io/Phoenix-pages/",
         "Code": "https://github.com/Anyverse-Dynamics/Phoenix-MWA",
         "Benchmark results": "https://openphoenix-team.github.io/Phoenix-pages/#section-5"
-      }
+      },
+      "githubStars": 41
     },
     {
       "id": "wiyh",
@@ -172,7 +173,8 @@ window.PROFILE = {
       "figure": 1,
       "figurePage": 1,
       "figureSource": "https://arxiv.org/pdf/2512.24310#page=1",
-      "group": "first"
+      "group": "first",
+      "githubStars": 133
     },
     {
       "id": "gift",
@@ -467,7 +469,8 @@ window.PROFILE = {
       "figure": 1,
       "figurePage": 1,
       "figureSource": "https://arxiv.org/pdf/2608.10413#page=1",
-      "group": "lead"
+      "group": "lead",
+      "githubStars": 34
     },
     {
       "id": "latentwam",
@@ -507,7 +510,8 @@ window.PROFILE = {
       "figure": 2,
       "figurePage": 3,
       "figureSource": "https://arxiv.org/pdf/2603.24581#page=3",
-      "group": "lead"
+      "group": "lead",
+      "githubStars": 14
     },
     {
       "id": "dreamerad",
@@ -581,7 +585,8 @@ window.PROFILE = {
       "figure": 1,
       "figurePage": 1,
       "figureSource": "https://arxiv.org/pdf/2412.02689#page=1",
-      "group": "first"
+      "group": "first",
+      "githubStars": 49
     },
     {
       "id": "planagent",
@@ -619,7 +624,8 @@ window.PROFILE = {
       "figure": 2,
       "figurePage": 4,
       "figureSource": "https://arxiv.org/pdf/2406.01587#page=4",
-      "group": "first"
+      "group": "first",
+      "githubStars": 4
     },
     {
       "id": "mimir",
@@ -652,7 +658,8 @@ window.PROFILE = {
       "figure": 1,
       "figurePage": 1,
       "figureSource": "https://arxiv.org/pdf/2512.07130#page=1",
-      "group": "lead"
+      "group": "lead",
+      "githubStars": 23
     },
     {
       "id": "world4drive",
@@ -689,7 +696,8 @@ window.PROFILE = {
       "figure": 2,
       "figurePage": 3,
       "figureSource": "https://arxiv.org/pdf/2507.00603#page=3",
-      "group": "first"
+      "group": "first",
+      "githubStars": 114
     },
     {
       "id": "discene",
@@ -720,7 +728,8 @@ window.PROFILE = {
       "figure": 2,
       "figurePage": 3,
       "figureSource": "https://arxiv.org/pdf/2602.02318#page=3",
-      "group": "lead"
+      "group": "lead",
+      "githubStars": 7
     },
     {
       "id": "uncad",
@@ -754,7 +763,8 @@ window.PROFILE = {
       "figure": 2,
       "figurePage": 3,
       "figureSource": "https://arxiv.org/pdf/2504.12826#page=3",
-      "group": "lead"
+      "group": "lead",
+      "githubStars": 18
     },
     {
       "id": "tod3cap",
@@ -795,7 +805,8 @@ window.PROFILE = {
       "figure": 1,
       "figurePage": 1,
       "figureSource": "https://arxiv.org/pdf/2403.19589#page=1",
-      "group": "corresponding"
+      "group": "corresponding",
+      "githubStars": 135
     },
     {
       "id": "monoocc",
@@ -829,7 +840,8 @@ window.PROFILE = {
       "figure": 2,
       "figurePage": 3,
       "figureSource": "https://arxiv.org/pdf/2403.08766#page=3",
-      "group": "first"
+      "group": "first",
+      "githubStars": 117
     },
     {
       "id": "steps",
@@ -865,7 +877,8 @@ window.PROFILE = {
       "figure": 1,
       "figurePage": 1,
       "figureSource": "https://arxiv.org/pdf/2302.01334#page=1",
-      "group": "first"
+      "group": "first",
+      "githubStars": 194
     }
   ]
 };

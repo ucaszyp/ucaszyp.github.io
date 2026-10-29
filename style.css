@@ -88,7 +88,9 @@ h1 span { display: inline-block; font-size: 25px; font-weight: 400; letter-spaci
 .status.conditional { color: #9a7338; background: #fbf5e9; }
 .role { color: #7a8490; font-size: 10px; }
 .description { color: #576475; font-size: 12px; line-height: 1.7; margin-top: 7px; }
-.paper-links { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 9px; font-size: 11px; font-weight: 600; }
+.paper-links { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; margin-top: 9px; font-size: 11px; font-weight: 600; }
+.code-links { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.star-link { display: inline-block; padding: 1px 6px; border: 1px solid var(--line); border-radius: 4px; background: #f8fafc; color: #526276; font-size: 10px; font-variant-numeric: tabular-nums; }
 .paper-highlight { display: inline-block; color: #9b421c; background: #fff1e8; border-radius: 4px; padding: 2px 8px; margin-bottom: 8px; font-size: 11px; font-weight: 700; }
 .publication-highlight .role { color: #9b421c; font-size: 12px; font-weight: 700; }
 .publication-highlight .paper-visual img { height: auto; }

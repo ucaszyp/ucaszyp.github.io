@@ -22,6 +22,32 @@ function link(label, url, className) {
   return node;
 }
 
+const starRequests = new Map();
+
+function githubStars(repository) {
+  if (!starRequests.has(repository)) {
+    const request = (async () => {
+      const cacheKey = `github-stars:${repository}`;
+      try {
+        const cached = JSON.parse(localStorage.getItem(cacheKey));
+        if (cached && Number.isInteger(cached.count) && Date.now() - cached.time < 3600000) {
+          return cached.count;
+        }
+      } catch { /* Storage may be unavailable in private browsing. */ }
+      const response = await fetch(`https://api.github.com/repos/${repository}`);
+      if (!response.ok) return null;
+      const data = await response.json();
+      if (!Number.isInteger(data.stargazers_count)) return null;
+      try {
+        localStorage.setItem(cacheKey, JSON.stringify({ count: data.stargazers_count, time: Date.now() }));
+      } catch { /* The verified count remains visible without storage. */ }
+      return data.stargazers_count;
+    })().catch(() => null);
+    starRequests.set(repository, request);
+  }
+  return starRequests.get(repository);
+}
+
 document.querySelector("#profile-name").replaceChildren(
   document.createTextNode(`${profile.name} `),
   element("span", "", profile.nameChinese),
@@ -123,7 +149,32 @@ function paperCard(paper) {
   venue.append(element("span", "role", paper.role));
   const links = element("div", "paper-links");
   for (const [label, url] of Object.entries(paper.links)) {
-    links.append(link(label, url));
+    const repository = label === "Code"
+      ? url.match(/^https:\/\/github\.com\/([^/]+)\/([^/#?]+)\/?$/)
+      : null;
+    if (repository) {
+      const name = `${repository[1]}/${repository[2]}`;
+      const codeLinks = element("span", "code-links");
+      const stars = link("", `${url.replace(/\/$/, "")}/stargazers`, "star-link");
+      const showCount = (count) => {
+        stars.textContent = `★ ${count.toLocaleString("en-US")}`;
+        stars.setAttribute("aria-label", `${name}: ${count} GitHub stars`);
+        stars.title = `${name} · ${count} GitHub stars`;
+      };
+      if (Number.isInteger(paper.githubStars)) {
+        showCount(paper.githubStars);
+      } else {
+        stars.textContent = "★ Stars";
+        stars.setAttribute("aria-label", `${name}: GitHub stars`);
+      }
+      githubStars(name).then((count) => {
+        if (count !== null) showCount(count);
+      });
+      codeLinks.append(link(label, url), stars);
+      links.append(codeLinks);
+    } else {
+      links.append(link(label, url));
+    }
   }
   body.append(title, authors, venue, element("p", "description", paper.description), links);
   if (paper.highlight) body.prepend(element("p", "paper-highlight", paper.highlight));
