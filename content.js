@@ -458,10 +458,12 @@ window.PROFILE = {
       "role": "Corresponding author",
       "selected": true,
       "description": "Visuo-tactile world modeling and closed-loop feedback for contact-rich manipulation.",
+      "highlight": "OmniViTac dataset · ~120K Hugging Face downloads (October 2026)",
       "image": "figure-omnivta.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2603.19201",
-        "Project": "https://mrsecant.github.io/OmniVTA"
+        "Project": "https://mrsecant.github.io/OmniVTA",
+        "Hugging Face": "https://huggingface.co/datasets/tars-robotics/OmniVitac"
       },
       "imageAlt": "OmniVTA, Figure 1 from the paper",
       "figure": 1,
