@@ -125,6 +125,77 @@ window.PROFILE = {
       "githubStars": 41
     },
     {
+      "id": "physcanvas",
+      "short": "PhysCanvas",
+      "title": "Physical Canvas: A Vision Tactile World Model for Robot Policy Evaluation and Learning",
+      "authors": [
+        "Zebin Xing",
+        "Yuhang Zheng",
+        "Yupeng Zheng",
+        "Yichen Zhang",
+        "Zichen Li",
+        "Shangqing Zhou",
+        "Yujie Zang",
+        "Yuchen Liu",
+        "Zhongpu Xia",
+        "Haoran Li",
+        "Qichao Zhang"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "Co-first author",
+      "selected": true,
+      "description": "A unified vision-tactile world model for evaluating robot policies and improving them through imagined interactions.",
+      "image": "figure-physcanvas.webp",
+      "imageAlt": "PhysCanvas overview from the project page: unified vision-tactile modeling for policy evaluation and learning",
+      "figureSource": "https://zebinx.github.io/PhysCanvas_HomePage/#overview",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2610.28613",
+        "Project": "https://zebinx.github.io/PhysCanvas_HomePage/",
+        "Code": "https://github.com/OpenPhoenix-Team/PhysCanvas"
+      },
+      "githubStars": 0,
+      "group": "lead"
+    },
+    {
+      "id": "interaction",
+      "short": "ILA",
+      "title": "Interaction Latents as Actions for Contact-Rich Manipulation",
+      "authors": [
+        "Yuhang Zheng",
+        "Yujie Zang",
+        "Yuchen Liu",
+        "Yupeng Zheng",
+        "Zhennan Jiang",
+        "Zebin Xing",
+        "Shuai Tian",
+        "Songen Gu",
+        "Jingxiang Guo",
+        "Chen Gao",
+        "Zhongpu Xia",
+        "Shuicheng Yan"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "Preprint",
+      "topic": "Robotics",
+      "role": "Corresponding author",
+      "selected": true,
+      "description": "Representing motion, contact, and force evolution as shared action units for contact-rich manipulation.",
+      "image": "figure-interaction.webp",
+      "links": {
+        "arXiv": "https://arxiv.org/abs/2610.18855",
+        "Project": "https://mrsecant.github.io/ILA/proj_page/"
+      },
+      "imageAlt": "ILA, Figure 1 from the paper",
+      "figure": 1,
+      "figurePage": 2,
+      "figureSource": "https://arxiv.org/pdf/2610.18855#page=2",
+      "group": "corresponding"
+    },
+    {
       "id": "wiyh",
       "short": "WIYH",
       "title": "World In Your Hands: A Large-Scale and Open-Source Ecosystem for Learning Human-Centric Manipulation in the Wild",
@@ -290,42 +361,6 @@ window.PROFILE = {
       "figure": 1,
       "figurePage": 2,
       "figureSource": "https://arxiv.org/pdf/2608.24882#page=2",
-      "group": "corresponding"
-    },
-    {
-      "id": "interaction",
-      "short": "ILA",
-      "title": "Interaction Latents as Actions for Contact-Rich Manipulation",
-      "authors": [
-        "Yuhang Zheng",
-        "Yujie Zang",
-        "Yuchen Liu",
-        "Yupeng Zheng",
-        "Zhennan Jiang",
-        "Zebin Xing",
-        "Shuai Tian",
-        "Songen Gu",
-        "Jingxiang Guo",
-        "Chen Gao",
-        "Zhongpu Xia",
-        "Shuicheng Yan"
-      ],
-      "year": 2026,
-      "venue": "arXiv",
-      "status": "Preprint",
-      "topic": "Robotics",
-      "role": "Corresponding author",
-      "selected": true,
-      "description": "Representing motion, contact, and force evolution as shared action units for contact-rich manipulation.",
-      "image": "figure-interaction.webp",
-      "links": {
-        "arXiv": "https://arxiv.org/abs/2610.18855",
-        "Project": "https://mrsecant.github.io/ILA/"
-      },
-      "imageAlt": "ILA, Figure 1 from the paper",
-      "figure": 1,
-      "figurePage": 2,
-      "figureSource": "https://arxiv.org/pdf/2610.18855#page=2",
       "group": "corresponding"
     },
     {
