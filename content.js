@@ -26,8 +26,8 @@ window.PROFILE = {
       "text": "Phoenix released: SOTA across six benchmarks among the open-source methods compared in the project report: LIBERO-Plus (94.63%), LIBERO-Pro (66.48%), RoboCasa-GR1 (82.67%), RoboTwin 2.0 C2R (72.42%), Bench2Dex (45.6%), and RoboDojo-RealWorld (26.11%). First Author & Project Leader."
     },
     {
-      "date": "2026",
-      "text": "World In Your Hands (WIYH) accepted to CoRL 2026."
+      "date": "2026-09",
+      "text": "World In Your Hands (WIYH) was accepted to CoRL 2026 in September. The dataset has approximately 450,000 downloads on Hugging Face as of October 2026."
     },
     {
       "date": "2026",
@@ -161,6 +161,7 @@ window.PROFILE = {
       "role": "First author",
       "selected": true,
       "description": "An open ecosystem of in-the-wild human manipulation data, wearable collection hardware, and benchmarks for learning robot skills.",
+      "highlight": "Accepted September 2026 · ~450K Hugging Face downloads (October 2026)",
       "image": "figure-wiyh.webp",
       "links": {
         "arXiv": "https://arxiv.org/abs/2512.24310",
