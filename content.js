@@ -167,7 +167,8 @@ window.PROFILE = {
       "links": {
         "arXiv": "https://arxiv.org/abs/2512.24310",
         "Project": "https://wiyh.tars-ai.com/",
-        "Code": "https://github.com/tars-robotics/World-In-Your-Hands"
+        "Code": "https://github.com/tars-robotics/World-In-Your-Hands",
+        "Hugging Face": "https://huggingface.co/datasets/tars-robotics/WIYH"
       },
       "imageAlt": "WIYH, Figure 1 from the paper",
       "figure": 1,
