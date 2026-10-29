@@ -59,7 +59,7 @@ h1 span { display: inline-block; font-size: 25px; font-weight: 400; letter-spaci
 .filter:hover { background: #f0f4f8; }
 #paper-search { width: 150px; padding: 6px 9px; font-size: 12px; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); background: #fff; }
 .paper-count { color: #8490a0; font-size: 11px; margin: 10px 0 0; }
-.role-tabs { display: flex; gap: 26px; margin-top: 20px; border-bottom: 1px solid var(--line); }
+.role-tabs { display: flex; flex-wrap: wrap; column-gap: 26px; row-gap: 0; margin-top: 20px; border-bottom: 1px solid var(--line); }
 .role-tabs[hidden] { display: none; }
 .role-tabs button { border: 0; border-bottom: 2px solid transparent; padding: 10px 2px; margin-bottom: -1px; background: transparent; color: var(--muted); cursor: pointer; font-size: 13px; white-space: nowrap; }
 .role-tabs button[aria-selected="true"] { color: var(--blue); border-bottom-color: var(--blue); font-weight: 650; }
