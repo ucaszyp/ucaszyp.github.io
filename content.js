@@ -6,7 +6,7 @@ window.PROFILE = {
   "nameChinese": "郑宇鹏",
   "affiliation": "Institute of Automation, Chinese Academy of Sciences",
   "affiliationChinese": "中国科学院自动化研究所",
-  "introduction": "I work on embodied intelligence at the Institute of Automation, Chinese Academy of Sciences, advised by Dongbin Zhao (赵冬斌) and Qichao Zhang (张启超).",
+  "introduction": "I work on embodied intelligence at the Institute of Automation, Chinese Academy of Sciences, advised by Prof. Dongbin Zhao (赵冬斌) and Prof. Qichao Zhang (张启超).",
   "research": "My research spans robotic manipulation, world models, and autonomous driving. I study how agents can learn useful representations of the physical world and turn them into reliable actions, with recent work on vision-language-action models, visuo-tactile learning, and latent world models. I am the first author and project leader of Phoenix, which achieves state-of-the-art results across multiple robotic manipulation benchmarks.",
   "photo": "portrait.jpg",
   "email": "",
