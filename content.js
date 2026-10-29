@@ -22,7 +22,7 @@ window.PROFILE = {
       "url": "https://engage.ieee.org/index.php/email/emailWebview?email=NzU2LUdQSC04OTkAAAGlIChiWqfpvjs7KWmVmplkUwlDjMDJIA5rIFd3DRHGY6Su3bAi3EAsBcfoAixhT3CT5qfVFbNtxhxLMtxaJXzGBvKCgcG2FPOsxK8"
     },
     {
-      "date": "2026",
+      "date": "2026-10",
       "text": "Phoenix released: SOTA across six benchmarks among the open-source methods compared in the project report: LIBERO-Plus (94.63%), LIBERO-Pro (66.48%), RoboCasa-GR1 (82.67%), RoboTwin 2.0 C2R (72.42%), Bench2Dex (45.6%), and RoboDojo-RealWorld (26.11%). First Author & Project Leader."
     },
     {
