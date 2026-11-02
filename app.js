@@ -27,20 +27,13 @@ const starRequests = new Map();
 function githubStars(repository) {
   if (!starRequests.has(repository)) {
     const request = (async () => {
-      const cacheKey = `github-stars:${repository}`;
-      try {
-        const cached = JSON.parse(localStorage.getItem(cacheKey));
-        if (cached && Number.isInteger(cached.count) && Date.now() - cached.time < 3600000) {
-          return cached.count;
-        }
-      } catch { /* Storage may be unavailable in private browsing. */ }
-      const response = await fetch(`https://api.github.com/repos/${repository}`);
+      const response = await fetch(`https://api.github.com/repos/${repository}`, {
+        cache: "no-store",
+        signal: AbortSignal.timeout(10000),
+      });
       if (!response.ok) return null;
       const data = await response.json();
-      if (!Number.isInteger(data.stargazers_count)) return null;
-      try {
-        localStorage.setItem(cacheKey, JSON.stringify({ count: data.stargazers_count, time: Date.now() }));
-      } catch { /* The verified count remains visible without storage. */ }
+      if (!Number.isInteger(data.stargazers_count) || data.stargazers_count < 0) return null;
       return data.stargazers_count;
     })().catch(() => null);
     starRequests.set(repository, request);
@@ -161,12 +154,9 @@ function paperCard(paper) {
         stars.setAttribute("aria-label", `${name}: ${count} GitHub stars`);
         stars.title = `${name} · ${count} GitHub stars`;
       };
-      if (Number.isInteger(paper.githubStars)) {
-        showCount(paper.githubStars);
-      } else {
-        stars.textContent = "★ Stars";
-        stars.setAttribute("aria-label", `${name}: GitHub stars`);
-      }
+      stars.textContent = "★ Stars";
+      stars.setAttribute("aria-label", `${name}: GitHub stars`);
+      stars.title = "View stars on GitHub";
       githubStars(name).then((count) => {
         if (count !== null) showCount(count);
       });
