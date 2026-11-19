@@ -13,8 +13,14 @@ window.PROFILE = {
   "cv": "",
   "scholar": "https://scholar.google.com/citations?hl=en&user=anGhGdYAAAAJ",
   "github": "https://github.com/ucaszyp",
-  "updated": "October 2026",
+  "updated": "November 2026",
   "news": [
+    {
+      "date": "2026-11",
+      "text": "Phoenix paper released: LIBERO-Plus 94.8%, LIBERO-Pro 66.5%, RoboCasa-GR1 82.7%, RoboTwin 2.0 C2R 72.4%, Bench2Dex 45.6%, and RoboDojo-RealWorld 30.0%, under the benchmark-specific settings in the paper. First Author & Project Leader.",
+      "linkLabel": "Read the paper",
+      "url": "https://arxiv.org/pdf/2611.24938"
+    },
     {
       "date": "2026-10",
       "text": "PlanAgent was featured in the Research Frontier section of IEEE CIS Newsletter, Issue 165 (October 2026).",
@@ -23,7 +29,7 @@ window.PROFILE = {
     },
     {
       "date": "2026-10",
-      "text": "Phoenix released: SOTA across six benchmarks among the open-source methods compared in the project report: LIBERO-Plus (94.63%), LIBERO-Pro (66.48%), RoboCasa-GR1 (82.67%), RoboTwin 2.0 C2R (72.42%), Bench2Dex (45.6%), and RoboDojo-RealWorld (26.11%). First Author & Project Leader."
+      "text": "Phoenix released: state-of-the-art results across six robotic manipulation benchmarks. First Author & Project Leader."
     },
     {
       "date": "2026-09",
@@ -90,19 +96,19 @@ window.PROFILE = {
       "results": [
         {
           "benchmark": "LIBERO-Plus",
-          "score": "94.63%"
+          "score": "94.8%"
         },
         {
           "benchmark": "LIBERO-Pro",
-          "score": "66.48%"
+          "score": "66.5%"
         },
         {
           "benchmark": "RoboCasa-GR1",
-          "score": "82.67%"
+          "score": "82.7%"
         },
         {
           "benchmark": "RoboTwin 2.0 C2R",
-          "score": "72.42%"
+          "score": "72.4%"
         },
         {
           "benchmark": "Bench2Dex",
@@ -110,13 +116,13 @@ window.PROFILE = {
         },
         {
           "benchmark": "RoboDojo-RealWorld",
-          "score": "26.11%"
+          "score": "30.0%"
         }
       ],
-      "resultsNote": "Best reported success rates among the open-source methods compared in the project report (October 2026); benchmark settings follow the report.",
-      "image": "figure-phoenix.webp",
-      "imageAlt": "Phoenix-MWA comparison with previous open-source SOTA and π0.5 across six manipulation benchmarks",
-      "figureSource": "https://openphoenix-team.github.io/Phoenix-pages/#overview",
+      "resultsNote": "Success rates reported in arXiv:2611.24938 (November 2026), Tables 1–3 and S1–S2; each benchmark uses its own post-training and evaluation setting.",
+      "image": "figure-phoenix-20261119.png",
+      "imageAlt": "Phoenix paper Figure 1: success rates across six manipulation benchmarks",
+      "figureSource": "https://arxiv.org/pdf/2611.24938#page=1",
       "links": {
         "Paper": "https://arxiv.org/pdf/2611.24938",
         "Project / Report": "https://openphoenix-team.github.io/Phoenix-pages/",
