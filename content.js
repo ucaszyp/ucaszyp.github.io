@@ -118,6 +118,7 @@ window.PROFILE = {
       "imageAlt": "Phoenix-MWA comparison with previous open-source SOTA and π0.5 across six manipulation benchmarks",
       "figureSource": "https://openphoenix-team.github.io/Phoenix-pages/#overview",
       "links": {
+        "Paper": "https://arxiv.org/pdf/2611.24938",
         "Project / Report": "https://openphoenix-team.github.io/Phoenix-pages/",
         "Code": "https://github.com/Anyverse-Dynamics/Phoenix-MWA",
         "Benchmark results": "https://openphoenix-team.github.io/Phoenix-pages/#section-5"
