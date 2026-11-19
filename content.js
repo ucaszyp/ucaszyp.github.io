@@ -75,7 +75,7 @@ window.PROFILE = {
     {
       "id": "phoenix",
       "short": "Phoenix",
-      "title": "Phoenix: Scaling Robotic Manipulation through Visual and Interaction Representations",
+      "title": "Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models",
       "authors": [
         "Yupeng Zheng"
       ],
@@ -127,7 +127,8 @@ window.PROFILE = {
         "Paper": "https://arxiv.org/pdf/2611.24938",
         "Project / Report": "https://openphoenix-team.github.io/Phoenix-pages/",
         "Code": "https://github.com/Anyverse-Dynamics/Phoenix-MWA",
-        "Benchmark results": "https://openphoenix-team.github.io/Phoenix-pages/#section-5"
+        "Benchmark results": "https://openphoenix-team.github.io/Phoenix-pages/#section-5",
+        "BibTeX": "citation-phoenix.bib"
       }
     },
     {
